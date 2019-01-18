@@ -51,6 +51,7 @@
 		844ABC4021F216F300CCC6C2 /* OCDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		844ABC4421F216F300CCC6C2 /* OCDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCDemoUITests.m; sourceTree = "<group>"; };
 		844ABC4621F216F300CCC6C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		844ABC9721F22A6700CCC6C2 /* OCDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OCDemo-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +111,7 @@
 				844ABC2B21F216F200CCC6C2 /* LaunchScreen.storyboard */,
 				844ABC2E21F216F200CCC6C2 /* Info.plist */,
 				844ABC2F21F216F200CCC6C2 /* main.m */,
+				844ABC9721F22A6700CCC6C2 /* OCDemo-Prefix.pch */,
 			);
 			path = OCDemo;
 			sourceTree = "<group>";
@@ -437,6 +439,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 585WE4H6S4;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/OCDemo/OCDemo-Prefix.pch";
 				INFOPLIST_FILE = OCDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -455,6 +458,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 585WE4H6S4;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/OCDemo/OCDemo-Prefix.pch";
 				INFOPLIST_FILE = OCDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

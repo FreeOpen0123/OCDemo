@@ -13,3 +13,9 @@ A summary of commonly used features in iOS.
 
 ***
 
+## 手动添加 PCH 文件 
+
+Xcode 6 以后没有自带的pch文件，创建步骤:  
+1. New File... --> iOS --> Other --> PCH File  
+2. 设置pch文件的路径: Targets --> Build Settings --> Prefix Header->设置 $(SRCROOT)/文件在工程中的路  
+3. pch 能向以前一样正常使用
