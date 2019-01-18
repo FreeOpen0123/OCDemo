@@ -35,5 +35,9 @@ self.window.backgroundColor = [UIColor whiteColor];
 self.window.rootViewController = [[UIViewController alloc]init];
 ```
 
+## 添加 AppIcon 和 LaunchImage
 
+1. 在 Assets.xcassets 中右键 App Icons & Launch Images 选择 New iOS Launch Image。
+2. Targets --> General -->  Launch Images Source 改成 LaunchImage，Launch Screen File 改成空。
+3. ~~将 LaunchScreen.storyboard 的设置中的 Use as Launch Screen 取消~~
 

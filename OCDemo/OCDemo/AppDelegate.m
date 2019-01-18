@@ -24,6 +24,8 @@
     
     self.window.rootViewController = [[UIViewController alloc]init];
     
+    NSLog(@"启动啦");
+    
     return YES;
 }
 
