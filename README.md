@@ -301,6 +301,15 @@ iOS 10 及以后需要在 Info.plist 里添加隐私权限描述
     <!-- 隐私权限描述结束 -->
 ```
 
+## 添加常用文件夹
+
+1. 本地新建文件夹，拖入项目中时，选择 `Copy items if needed`、`Create groups`、`Add to targets 第一个`
+2. File --> New Group 新建 Supporting Files 文件夹，将 `LaunchScreen.storyboard`、`Info.plist`、`main.m`、`OCDemo-Prefix.pch` 移到文件夹中。
+3. 修改 pch 路径，TARGETS --> Build Settings --> Prefix Header。
+4. 修改 plist 路径，TARGETS --> Build Settings --> 选中 All 和 Combined --> Packaging --> Info.plist File 修改路径。
+
+
+
 
 
 

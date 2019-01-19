@@ -97,13 +97,20 @@
 		844ABC1F21F216F200CCC6C2 /* OCDemo */ = {
 			isa = PBXGroup;
 			children = (
+				844ABCD521F3730700CCC6C2 /* ThirdPartyLibrary */,
+				844ABCD421F3730000CCC6C2 /* Base */,
+				844ABCE421F37BA600CCC6C2 /* Category */,
+				844ABCDE21F378B800CCC6C2 /* Utility */,
+				844ABCD121F3723000CCC6C2 /* Common */,
+				844ABCCB21F3716100CCC6C2 /* One */,
+				844ABCCA21F3715C00CCC6C2 /* Two */,
+				844ABCC921F3715700CCC6C2 /* Three */,
+				844ABCC821F3715200CCC6C2 /* Four */,
+				844ABCC321F370B800CCC6C2 /* TabBarController */,
 				844ABC2021F216F200CCC6C2 /* AppDelegate.h */,
 				844ABC2121F216F200CCC6C2 /* AppDelegate.m */,
 				844ABC2921F216F200CCC6C2 /* Assets.xcassets */,
-				844ABC2B21F216F200CCC6C2 /* LaunchScreen.storyboard */,
-				844ABC2E21F216F200CCC6C2 /* Info.plist */,
-				844ABC2F21F216F200CCC6C2 /* main.m */,
-				844ABC9721F22A6700CCC6C2 /* OCDemo-Prefix.pch */,
+				844ABCE721F37DFA00CCC6C2 /* Supporting Files */,
 			);
 			path = OCDemo;
 			sourceTree = "<group>";
@@ -124,6 +131,167 @@
 				844ABC4621F216F300CCC6C2 /* Info.plist */,
 			);
 			path = OCDemoUITests;
+			sourceTree = "<group>";
+		};
+		844ABCC321F370B800CCC6C2 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		844ABCC821F3715200CCC6C2 /* Four */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Four;
+			sourceTree = "<group>";
+		};
+		844ABCC921F3715700CCC6C2 /* Three */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Three;
+			sourceTree = "<group>";
+		};
+		844ABCCA21F3715C00CCC6C2 /* Two */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Two;
+			sourceTree = "<group>";
+		};
+		844ABCCB21F3716100CCC6C2 /* One */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = One;
+			sourceTree = "<group>";
+		};
+		844ABCD121F3723000CCC6C2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				844ABCE121F3799D00CCC6C2 /* Test */,
+				844ABCDF21F378E000CCC6C2 /* Header */,
+				844ABCD621F3736000CCC6C2 /* Localized */,
+				844ABCD221F3723000CCC6C2 /* Resource */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		844ABCD221F3723000CCC6C2 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				844ABCE321F37A3C00CCC6C2 /* JSON */,
+				844ABCE221F37A3700CCC6C2 /* XML */,
+				844ABCD821F3761500CCC6C2 /* FontFile */,
+				844ABCD921F3761D00CCC6C2 /* Image */,
+				844ABCDB21F3762600CCC6C2 /* Web */,
+				844ABCDA21F3762200CCC6C2 /* Media */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		844ABCD421F3730000CCC6C2 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		844ABCD521F3730700CCC6C2 /* ThirdPartyLibrary */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdPartyLibrary;
+			sourceTree = "<group>";
+		};
+		844ABCD621F3736000CCC6C2 /* Localized */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localized;
+			sourceTree = "<group>";
+		};
+		844ABCD821F3761500CCC6C2 /* FontFile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FontFile;
+			sourceTree = "<group>";
+		};
+		844ABCD921F3761D00CCC6C2 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		844ABCDA21F3762200CCC6C2 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		844ABCDB21F3762600CCC6C2 /* Web */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Web;
+			sourceTree = "<group>";
+		};
+		844ABCDE21F378B800CCC6C2 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		844ABCDF21F378E000CCC6C2 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		844ABCE121F3799D00CCC6C2 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
+		844ABCE221F37A3700CCC6C2 /* XML */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = XML;
+			sourceTree = "<group>";
+		};
+		844ABCE321F37A3C00CCC6C2 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		844ABCE421F37BA600CCC6C2 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		844ABCE721F37DFA00CCC6C2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				844ABC2B21F216F200CCC6C2 /* LaunchScreen.storyboard */,
+				844ABC2E21F216F200CCC6C2 /* Info.plist */,
+				844ABC2F21F216F200CCC6C2 /* main.m */,
+				844ABC9721F22A6700CCC6C2 /* OCDemo-Prefix.pch */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,8 +590,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 585WE4H6S4;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/OCDemo/OCDemo-Prefix.pch";
-				INFOPLIST_FILE = OCDemo/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/OCDemo/Supporting Files/OCDemo-Prefix.pch";
+				INFOPLIST_FILE = "OCDemo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -442,8 +610,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 585WE4H6S4;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/OCDemo/OCDemo-Prefix.pch";
-				INFOPLIST_FILE = OCDemo/Info.plist;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/OCDemo/Supporting Files/OCDemo-Prefix.pch";
+				INFOPLIST_FILE = "OCDemo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
