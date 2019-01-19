@@ -241,5 +241,69 @@ TARGETS --> Info --> URL Types --> URL Schemes 填写自己的 URL Scheme
 	</array>
 ```
 
+## 隐私权限描述
+
+iOS 10 及以后需要在 Info.plist 里添加隐私权限描述
+
+```
+    <!-- 隐私权限描述 -->
+    <key>NSLocationUsageDescription</key>
+    <string>是否允许此 App 使用您的位置？</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>是否允许此 App 在使用期间访问位置？</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>是否允许此 App 始终访问位置？（iOS11 已降级为使用期间）</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>是否允许此 App 始终访问位置？</string>
+    
+    <key>NSContactsUsageDescription</key>
+    <string>是否允许此 App 访问你的通讯录？</string>
+    
+    <key>NSCalendarsUsageDescription</key>
+    <string>是否允许此 App 访问日历？</string>
+    
+    <key>NSRemindersUsageDescription</key>
+    <string>是否允许此 App 访问提醒事项？</string>
+    
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>是否允许此 App 读写照片？</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>是否允许此 App 添加照片？</string>
+    
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>是否允许此 App 使用蓝牙？</string>
+    
+    <key>NSMicrophoneUsageDescription</key>
+    <string>是否允许此 App 使用麦克风？</string>
+    
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>是否允许此 App 使用语音识别？</string>
+    
+    <key>NSCameraUsageDescription</key>
+    <string>是否允许此 App 使用相机？</string>
+    
+    <key>NSHealthShareUsageDescription</key>
+    <string>是否允许此 App 读取健康数据？</string>
+    <key>NSHealthUpdateUsageDescription</key>
+    <string>是否允许此 App 写入健康数据？</string>
+    
+    <key>NSHomeKitUsageDescription</key>
+    <string>是否允许此 App 访问住宅数据？</string>
+    
+    <key>NSAppleMusicUsageDescription</key>
+    <string>是否允许此 App 访问媒体资料库？</string>
+    
+    <key>NSMotionUsageDescription</key>
+    <string>是否允许此 App 读取运动与健身数据？</string>
+    
+    <key>NSSiriUsageDescription</key>
+    <string>是否允许此 App 使用 Siri？</string>
+    <!-- 隐私权限描述结束 -->
+```
+
+
+
+
+
 
 
