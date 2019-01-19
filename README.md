@@ -136,3 +136,24 @@ if (@available(iOS 11.0,*)) {
 2. 有重复的 info.plist 。
 3. Multiple commands produce，Xcode --> File --> Project Settings/Workspace Settings --> Build System --> New Build System(Default) 换成 Legacy Build System.  
 
+## 允许 http 请求
+
+```
+<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>freeopen.cc</key>
+			<dict/>
+			<key>NSIncludesSubdomains</key>
+			<true/>
+			<key>NSExceptionAllowsInsecureHTTPLoads</key>
+			<false/>
+			<key>NSExceptionRequiresForwardSecrecy</key>
+			<true/>
+		</dict>
+	</dict>
+```
+
