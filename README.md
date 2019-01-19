@@ -308,6 +308,62 @@ iOS 10 及以后需要在 Info.plist 里添加隐私权限描述
 3. 修改 pch 路径，TARGETS --> Build Settings --> Prefix Header。
 4. 修改 plist 路径，TARGETS --> Build Settings --> 选中 All 和 Combined --> Packaging --> Info.plist File 修改路径。
 
+## 国际化和本地化
+
+1. 在信息技术领域，国际化与本地化（英文：internationalization and localization， 简称成 i18n 及 L10n）是指修改软件使之能适应目标市场的语言、地区差异以及技术需要。
+2. 国际化是指在设计软件，将软件与特定语言及地区脱钩的过程。当软件被移植到不同的语言及地区时，软件本身不用做内部工程上的改变或修正。
+3. 本地化则是指当移植软件时，加上与特定区域设置有关的信息和翻译文件的过程。
+
+### 添加要支持的国际语言
+
+1. PROJECT --> Info --> Localizations 点击 + 添加需要支持的语言,选择对应 storyboard 文件，点击 Finish。默认 Development Language 是英语。
+
+### 系统配置的本地化（App 名称、隐私权限描述……）
+1. New File... --> iOS --> Resource --> Strings File --> Next --> 命名为 InfoPlist.strings（必须命名为InfoPlist）。
+2. 选中 InfoPlist.strings，展开右边 Show the File inspector,保证第一步已经添加了对应语言，Localization 中点击 Localize... ，弹出确认对话框，选择 Localize，如果有多种语言，然后勾选其他需要的语言。
+3. 在对应语言文件中按 key-value 的形式写入需要本地化的字符串，key 可以加引号也可以不加，value 需要加引号,以分号结尾。  
+`"CFBundleDisplayName" = "演示代码";`  
+`"NSPhotoLibraryUsageDescription" = "需要打开相册";`
+
+### 文本的本地化
+
+1. New File... --> iOS --> Resource --> Strings File --> Next --> 命名为 Localizable.strings（必须命名为Localizable）。
+2. 在对应语言文件中按 key-value 的形式写入需要本地化的字符串。  
+3. 使用NSLocalizedString按照给定的 key 查找对应 strings 文件时，如果找不到该 key 对应 value 时，默认返回的值就是 key。
+`"button" = "按钮";`
+`NSLocalizedString(<#key#>, <#comment#>)`
+`NSLocalizedString(@"button", nil)];`
+`NSLocalizedString(@"sampleText", @"这是个测试");`
+
+### 自定义 .strings 文件名
+
+1. New File... --> iOS --> Resource --> Strings File --> Next --> 命名为 MyLocalized.strings（可以自定义命名）。
+2. 使用 `NSLocalizedStringFromTable(<#key#>, <#tbl#>, <#comment#>)` 
+`NSLocalizedStringFromTable(@"MySampleText", @"MyLocalized", @"自定义国际化资源");`
+
+### 国际化数据格式
+
+不同的国家和地区有着不同的日期，时间，货币，数值等的格式，所以要在代码中根据用户设置的地区来正确的格式化这些数据。
+格式化时用到 NSLocale 类，NSLocale 类封装了某一个地区的相应的格式化信息，如果要获得用户当前设置地区的 NSLocale 实例可以使用 [NSLocale currentLocale] 或者 [NSLocale autoupdatingCurrentLocale]，两者的区别是，后一个类方法返回的值会根据用户设置的改变而改变，而前者不会。
+
+### 支持相反的语言方向
+
+有一些语言，比如阿拉伯语等，方向是从右向左的。使用
+Base Internationalization和Auto Layout在大部分情况下可以很好的支持这些语言，一些不支持的情况，可以在代码中进行如下判断：
+`if ([UIView userInterfaceLayoutDirectionForSemanticContentAttribute:view.semanticContentAttribute] == UIUserInterfaceLayoutDirectionRightToLeft)
+`
+
+### 修改默认 Development Language
+
+1. 将info.plist文件中CFBundleDevelopmentRegion(Localization native development region)修改为zh-Hans或China(修改为China，Xcode会转换为zh_CN)
+2. 使用文本编辑器打开.xcodeproj -> project.pbxproj路径的文件，将English修改为zh-Hans
+3. 重新打开程序即可，PROJECT -> info -> Localizations路径下，默认开发语言修改为Chinese(Simplified)-Development Language;
+
+
+
+
+
+
 
 
 
