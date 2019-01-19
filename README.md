@@ -157,3 +157,89 @@ if (@available(iOS 11.0,*)) {
 	</dict>
 ```
 
+## 配置 Scheme 白名单
+
+### 配置自己的 Scheme
+TARGETS --> Info --> URL Types --> URL Schemes 填写自己的 URL Scheme  
+当我们集成了第三方应用，比如友盟分享时，他会要求我们按照一个标准来设置应用的 scheme ，这时我们可以根据需要添加多个 scheme 。
+
+### 配置其他应用的 Scheme 白名单
+
+该白名单的个数是否有上限？暂时没有验证
+
+```
+<key>LSApplicationQueriesSchemes</key>
+	<array>
+        <!-- 微信 URL Scheme 白名单 -->
+		<string>wechat</string>
+		<string>weixin</string>
+        
+        <!-- 新浪微博 URL Scheme 白名单 -->
+		<string>sinaweibohd</string>
+		<string>sinaweibo</string>
+		<string>sinaweibosso</string>
+		<string>weibosdk</string>
+		<string>weibosdk2.5</string>
+        
+        <!-- 腾讯微博 URL Scheme 白名单 -->
+        <string>TencentWeibo</string>
+        <string>tencentweiboSdkv2</string>
+        
+        <!-- QQ URL Scheme 白名单 -->
+		<string>mqqapi</string>
+		<string>mqq</string>
+		<string>mqqOpensdkSSoLogin</string>
+		<string>mqqconnect</string>
+		<string>mqqopensdkdataline</string>
+		<string>mqqopensdkgrouptribeshare</string>
+		<string>mqqopensdkfriend</string>
+		<string>mqqopensdkapi</string>
+		<string>mqqopensdkapiV2</string>
+		<string>mqqopensdkapiV3</string>
+		<string>mqzoneopensdk</string>
+		<string>wtloginmqq</string>
+		<string>wtloginmqq2</string>
+		<string>mqqwpa</string>
+        
+        <!-- Qzone URL Scheme 白名单 -->
+		<string>mqzone</string>
+		<string>mqzonev2</string>
+		<string>mqzoneshare</string>
+		<string>wtloginqzone</string>
+		<string>mqzonewx</string>
+		<string>mqzoneopensdkapiV2</string>
+		<string>mqzoneopensdkapi19</string>
+		<string>mqzoneopensdkapi</string>
+		<string>mqzoneopensdk</string>
+        
+        <!-- 支付宝 URL Scheme 白名单 -->
+		<string>alipay</string>
+		<string>alipayshare</string>
+        
+        <!-- 钉钉 URL Scheme 白名单 -->
+        <string>dingtalk</string>
+        <string>dingtalk-open</string>
+        
+        <!-- Google URL Scheme 白名单 -->
+        <string>Google+</string>
+        <string>googlechrome</string>
+        
+        <!-- Facebook URL Scheme 白名单 -->
+        <string>fbauth2</string>
+        
+        <!-- Pocket URL Scheme 白名单 -->
+        <string>pocket-oauth-v1</string>
+        
+        <!-- Instagram URL Scheme 白名单 -->
+        <string>instagram</string>
+        
+        <!-- WhatsApp URL Scheme 白名单 -->
+        <string>whatsapp</string>
+        
+        <!-- Line URL Scheme 白名单 -->
+        <string>line</string>
+	</array>
+```
+
+
+
