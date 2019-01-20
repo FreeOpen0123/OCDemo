@@ -188,6 +188,13 @@
     <string>是否允许此 App 使用 Siri？</string>
     <!-- 隐私权限描述结束 -->
     
+    <!-- 导入自定义字体 -->
+    <key>UIAppFonts</key>
+    <array>
+        <string>站酷快乐体.ttf</string>
+    </array>
+    <!-- 导入自定义字体结束 -->
+    
     
     
 </dict>

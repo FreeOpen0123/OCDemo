@@ -359,6 +359,36 @@ Base Internationalization和Auto Layout在大部分情况下可以很好的支�
 2. 使用文本编辑器打开.xcodeproj -> project.pbxproj路径的文件，将English修改为zh-Hans
 3. 重新打开程序即可，PROJECT -> info -> Localizations路径下，默认开发语言修改为Chinese(Simplified)-Development Language;
 
+## 自定义字体
+
+1. 字体文件名不代表字体的名字。
+2. 将下载的字体 .ttf 文件导入工程中。
+3. 在 `Info.plist` 中添加 `Fonts provided by application` 类型为 Array，Item 填写字体文件名称加后缀，字段的值是字体文件的名字，不是字体名字。
+4. ~~TARGETS --> Build Phases --> Copy Bundle Resources 添加字体文件。~~
+5. 找到字体文件对应的 `fontName`
+   1. 选中该字体文件，右键显示简介，在通用的下面找到**全名**这一项就是字体的名字。（如果全名是中文有可能不准，`站酷快乐体`字体名其实是`HappyZcool-2016`）
+   2. 通过代码打印所有字体名找到该文件的字体名：
+     
+     ```
+     NSArray *familyNamesArray = [UIFont familyNames];
+    for (NSString *familyNames in familyNamesArray) {
+        
+        NSArray *fontNamesArray = [UIFont fontNamesForFamilyName:familyNames];
+        
+        for (NSString *fontName in fontNamesArray) {
+            
+            NSLog(@"fontName==%@",fontName);
+        }
+    }
+    
+     ```
+     
+6. 使用 `[UIFont fontWithName:<#(nonnull NSString *)#> size:<#(CGFloat)#>]` 调用字体。  
+   `[UIFont fontWithName:@"Source Han Serif" size:20.0];`
+   
+
+   
+
 
 
 
