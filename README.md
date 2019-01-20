@@ -417,6 +417,36 @@ GitHub 识别语言是根据仓库中使用最多的语言类型，没有直接�
 
 这表示将 js、css、html 代码按照 Objective-C 语言统计。
 
+## 添加 CocoaPods
+
+Search for pods (above). Then list the dependencies in a text file named Podfile in your Xcode project directory:
+
+```
+platform :ios, '8.0'
+use_frameworks!
+
+target 'MyApp' do
+  pod 'AFNetworking', '~> 2.6'
+  pod 'ORStackView', '~> 3.0'
+  pod 'SwiftyJSON', '~> 2.3'
+end
+```
+
+Tip: CocoaPods provides a `pod init` command to create a Podfile with smart defaults. You should use it.
+
+Now you can install the dependencies in your project:
+
+>$ pod install  
+
+Make sure to always open the Xcode workspace instead of the project file when building your project:
+
+>$ open App.xcworkspace
+
+Now you can import your dependencies e.g.:
+
+>\#import &lt;Reachability/Reachability.h&gt;
+
+
 
 
 
