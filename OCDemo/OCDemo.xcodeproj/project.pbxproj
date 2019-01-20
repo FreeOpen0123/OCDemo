@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FC081A5F8171FB3F17B8553 /* libPods-OCDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1576118C5171FACACE59F8E /* libPods-OCDemo.a */; };
 		8438203521F43ADE00A30FA3 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203421F43ADE00A30FA3 /* UIColor+Hex.m */; };
 		8438203921F43C0700A30FA3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203821F43C0700A30FA3 /* BaseViewController.m */; };
 		8438203D21F43C5A00A30FA3 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203C21F43C5A00A30FA3 /* TestViewController.m */; };
@@ -102,6 +103,9 @@
 		844ABD0A21F399E800CCC6C2 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/CustomLocalized.strings"; sourceTree = "<group>"; };
 		844ABD0B21F399E900CCC6C2 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/CustomLocalized.strings"; sourceTree = "<group>"; };
 		844ABD1421F4245B00CCC6C2 /* 站酷快乐体.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "站酷快乐体.ttf"; sourceTree = "<group>"; };
+		9B470786546A2CB89C27F627 /* Pods-OCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCDemo/Pods-OCDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		D1576118C5171FACACE59F8E /* libPods-OCDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED7A9477992E64A3B3997539 /* Pods-OCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCDemo/Pods-OCDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC081A5F8171FB3F17B8553 /* libPods-OCDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +134,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45F3E76BE03C82D46C1DFCAF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B470786546A2CB89C27F627 /* Pods-OCDemo.debug.xcconfig */,
+				ED7A9477992E64A3B3997539 /* Pods-OCDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5DE489C563EA2721B6ABECD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1576118C5171FACACE59F8E /* libPods-OCDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8438204421F43EAE00A30FA3 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +194,8 @@
 				844ABC3821F216F200CCC6C2 /* OCDemoTests */,
 				844ABC4321F216F300CCC6C2 /* OCDemoUITests */,
 				844ABC1E21F216F200CCC6C2 /* Products */,
+				45F3E76BE03C82D46C1DFCAF /* Pods */,
+				5DE489C563EA2721B6ABECD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -417,9 +441,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 844ABC4921F216F300CCC6C2 /* Build configuration list for PBXNativeTarget "OCDemo" */;
 			buildPhases = (
+				0316CD1A1D816371BF81A9BC /* [CP] Check Pods Manifest.lock */,
 				844ABC1921F216F200CCC6C2 /* Sources */,
 				844ABC1A21F216F200CCC6C2 /* Frameworks */,
 				844ABC1B21F216F200CCC6C2 /* Resources */,
+				C5A7A9DE24051E857F43C0E7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -544,6 +570,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0316CD1A1D816371BF81A9BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-OCDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C5A7A9DE24051E857F43C0E7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-OCDemo/Pods-OCDemo-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TZImagePickerController.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OCDemo/Pods-OCDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		844ABC1921F216F200CCC6C2 /* Sources */ = {
@@ -755,6 +830,7 @@
 		};
 		844ABC4A21F216F300CCC6C2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B470786546A2CB89C27F627 /* Pods-OCDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -775,6 +851,7 @@
 		};
 		844ABC4B21F216F300CCC6C2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED7A9477992E64A3B3997539 /* Pods-OCDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

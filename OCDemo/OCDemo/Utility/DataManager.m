@@ -8,6 +8,12 @@
 
 #import "DataManager.h"
 
+#import <AFNetworking.h>
+
 @implementation DataManager
+
+
+
+
 
 @end
