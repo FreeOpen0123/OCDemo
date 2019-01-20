@@ -62,10 +62,10 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-#custom
+#custom 自己添加的忽略文件，加上CocoaPods 后出问题了，需要注释掉
 .DS_Store
-*.xcworkspace
-!default.xcworkspace
-profile
-*.xcuserstate
+# *.xcworkspace
+# !default.xcworkspace
+# profile
+# *.xcuserstate
 
