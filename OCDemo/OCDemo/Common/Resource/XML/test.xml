@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+    <name>小明</name>
+    <age>23</age>
+    <areaCode>010</areaCode>
+    <data>
+        <Item key="1" value="A"></Item>
+        <Item key="2" value="B"></Item>
+        <Item key="3" value="C"></Item>
+    </data>
+</root>

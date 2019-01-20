@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8438203521F43ADE00A30FA3 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203421F43ADE00A30FA3 /* UIColor+Hex.m */; };
+		8438203921F43C0700A30FA3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203821F43C0700A30FA3 /* BaseViewController.m */; };
+		8438203D21F43C5A00A30FA3 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203C21F43C5A00A30FA3 /* TestViewController.m */; };
+		8438204221F43E4000A30FA3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438204121F43E4000A30FA3 /* MainViewController.m */; };
+		8438204A21F43F0800A30FA3 /* OneHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438204921F43F0800A30FA3 /* OneHomeViewController.m */; };
+		8438204D21F43F2500A30FA3 /* TwoHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438204C21F43F2500A30FA3 /* TwoHomeViewController.m */; };
+		8438205021F43F4300A30FA3 /* ThreeHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438204F21F43F4300A30FA3 /* ThreeHomeViewController.m */; };
+		8438205321F43F6100A30FA3 /* FourHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438205221F43F6100A30FA3 /* FourHomeViewController.m */; };
+		8438205A21F443FB00A30FA3 /* dynamic.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8438205921F443FB00A30FA3 /* dynamic.gif */; };
+		8438205E21F446C700A30FA3 /* TestWebView.html in Resources */ = {isa = PBXBuildFile; fileRef = 8438205D21F446C700A30FA3 /* TestWebView.html */; };
+		8438206021F448AA00A30FA3 /* Windbell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8438205F21F448AA00A30FA3 /* Windbell.mp3 */; };
+		8438206821F45BBD00A30FA3 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438206721F45BBD00A30FA3 /* DataManager.m */; };
+		8438206A21F4663C00A30FA3 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 8438206921F4663C00A30FA3 /* test.json */; };
+		8438206C21F4664200A30FA3 /* test.xml in Resources */ = {isa = PBXBuildFile; fileRef = 8438206B21F4664200A30FA3 /* test.xml */; };
 		844ABC2221F216F200CCC6C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 844ABC2121F216F200CCC6C2 /* AppDelegate.m */; };
 		844ABC2A21F216F200CCC6C2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 844ABC2921F216F200CCC6C2 /* Assets.xcassets */; };
 		844ABC2D21F216F200CCC6C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 844ABC2B21F216F200CCC6C2 /* LaunchScreen.storyboard */; };
@@ -37,6 +51,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8438203221F43A7F00A30FA3 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		8438203321F43ADE00A30FA3 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		8438203421F43ADE00A30FA3 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		8438203721F43C0700A30FA3 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		8438203821F43C0700A30FA3 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		8438203B21F43C5A00A30FA3 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		8438203C21F43C5A00A30FA3 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		8438204021F43E4000A30FA3 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		8438204121F43E4000A30FA3 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		8438204821F43F0800A30FA3 /* OneHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneHomeViewController.h; sourceTree = "<group>"; };
+		8438204921F43F0800A30FA3 /* OneHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneHomeViewController.m; sourceTree = "<group>"; };
+		8438204B21F43F2500A30FA3 /* TwoHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoHomeViewController.h; sourceTree = "<group>"; };
+		8438204C21F43F2500A30FA3 /* TwoHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoHomeViewController.m; sourceTree = "<group>"; };
+		8438204E21F43F4300A30FA3 /* ThreeHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThreeHomeViewController.h; sourceTree = "<group>"; };
+		8438204F21F43F4300A30FA3 /* ThreeHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ThreeHomeViewController.m; sourceTree = "<group>"; };
+		8438205121F43F6100A30FA3 /* FourHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourHomeViewController.h; sourceTree = "<group>"; };
+		8438205221F43F6100A30FA3 /* FourHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FourHomeViewController.m; sourceTree = "<group>"; };
+		8438205921F443FB00A30FA3 /* dynamic.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dynamic.gif; sourceTree = "<group>"; };
+		8438205D21F446C700A30FA3 /* TestWebView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TestWebView.html; sourceTree = "<group>"; };
+		8438205F21F448AA00A30FA3 /* Windbell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Windbell.mp3; sourceTree = "<group>"; };
+		8438206221F4554700A30FA3 /* Readme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Readme.h; sourceTree = "<group>"; };
+		8438206621F45BBD00A30FA3 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		8438206721F45BBD00A30FA3 /* DataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		8438206921F4663C00A30FA3 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		8438206B21F4664200A30FA3 /* test.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = test.xml; sourceTree = "<group>"; };
 		844ABC1D21F216F200CCC6C2 /* OCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		844ABC2021F216F200CCC6C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		844ABC2121F216F200CCC6C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +129,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8438204421F43EAE00A30FA3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8438204821F43F0800A30FA3 /* OneHomeViewController.h */,
+				8438204921F43F0800A30FA3 /* OneHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8438204521F43EC100A30FA3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8438204B21F43F2500A30FA3 /* TwoHomeViewController.h */,
+				8438204C21F43F2500A30FA3 /* TwoHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8438204621F43ECF00A30FA3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8438204E21F43F4300A30FA3 /* ThreeHomeViewController.h */,
+				8438204F21F43F4300A30FA3 /* ThreeHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8438204721F43EDE00A30FA3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8438205121F43F6100A30FA3 /* FourHomeViewController.h */,
+				8438205221F43F6100A30FA3 /* FourHomeViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		844ABC1421F216F200CCC6C2 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +227,8 @@
 		844ABCC321F370B800CCC6C2 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
+				8438204021F43E4000A30FA3 /* MainViewController.h */,
+				8438204121F43E4000A30FA3 /* MainViewController.m */,
 			);
 			path = TabBarController;
 			sourceTree = "<group>";
@@ -159,6 +236,7 @@
 		844ABCC821F3715200CCC6C2 /* Four */ = {
 			isa = PBXGroup;
 			children = (
+				8438204721F43EDE00A30FA3 /* Home */,
 			);
 			path = Four;
 			sourceTree = "<group>";
@@ -166,6 +244,7 @@
 		844ABCC921F3715700CCC6C2 /* Three */ = {
 			isa = PBXGroup;
 			children = (
+				8438204621F43ECF00A30FA3 /* Home */,
 			);
 			path = Three;
 			sourceTree = "<group>";
@@ -173,6 +252,7 @@
 		844ABCCA21F3715C00CCC6C2 /* Two */ = {
 			isa = PBXGroup;
 			children = (
+				8438204521F43EC100A30FA3 /* Home */,
 			);
 			path = Two;
 			sourceTree = "<group>";
@@ -180,6 +260,7 @@
 		844ABCCB21F3716100CCC6C2 /* One */ = {
 			isa = PBXGroup;
 			children = (
+				8438204421F43EAE00A30FA3 /* Home */,
 			);
 			path = One;
 			sourceTree = "<group>";
@@ -211,6 +292,8 @@
 		844ABCD421F3730000CCC6C2 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				8438203721F43C0700A30FA3 /* BaseViewController.h */,
+				8438203821F43C0700A30FA3 /* BaseViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -218,6 +301,7 @@
 		844ABCD521F3730700CCC6C2 /* ThirdPartyLibrary */ = {
 			isa = PBXGroup;
 			children = (
+				8438206221F4554700A30FA3 /* Readme.h */,
 			);
 			path = ThirdPartyLibrary;
 			sourceTree = "<group>";
@@ -243,6 +327,7 @@
 		844ABCD921F3761D00CCC6C2 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				8438205921F443FB00A30FA3 /* dynamic.gif */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -250,6 +335,7 @@
 		844ABCDA21F3762200CCC6C2 /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				8438205F21F448AA00A30FA3 /* Windbell.mp3 */,
 			);
 			path = Media;
 			sourceTree = "<group>";
@@ -257,6 +343,7 @@
 		844ABCDB21F3762600CCC6C2 /* Web */ = {
 			isa = PBXGroup;
 			children = (
+				8438205D21F446C700A30FA3 /* TestWebView.html */,
 			);
 			path = Web;
 			sourceTree = "<group>";
@@ -264,6 +351,8 @@
 		844ABCDE21F378B800CCC6C2 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				8438206621F45BBD00A30FA3 /* DataManager.h */,
+				8438206721F45BBD00A30FA3 /* DataManager.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -271,6 +360,7 @@
 		844ABCDF21F378E000CCC6C2 /* Header */ = {
 			isa = PBXGroup;
 			children = (
+				8438203221F43A7F00A30FA3 /* Header.h */,
 			);
 			path = Header;
 			sourceTree = "<group>";
@@ -278,6 +368,8 @@
 		844ABCE121F3799D00CCC6C2 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				8438203B21F43C5A00A30FA3 /* TestViewController.h */,
+				8438203C21F43C5A00A30FA3 /* TestViewController.m */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -285,6 +377,7 @@
 		844ABCE221F37A3700CCC6C2 /* XML */ = {
 			isa = PBXGroup;
 			children = (
+				8438206B21F4664200A30FA3 /* test.xml */,
 			);
 			path = XML;
 			sourceTree = "<group>";
@@ -292,6 +385,7 @@
 		844ABCE321F37A3C00CCC6C2 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
+				8438206921F4663C00A30FA3 /* test.json */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -299,6 +393,8 @@
 		844ABCE421F37BA600CCC6C2 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				8438203321F43ADE00A30FA3 /* UIColor+Hex.h */,
+				8438203421F43ADE00A30FA3 /* UIColor+Hex.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -423,7 +519,12 @@
 				844ABC2D21F216F200CCC6C2 /* LaunchScreen.storyboard in Resources */,
 				844ABD0221F399DB00CCC6C2 /* Localizable.strings in Resources */,
 				844ABCFD21F399C600CCC6C2 /* InfoPlist.strings in Resources */,
+				8438206021F448AA00A30FA3 /* Windbell.mp3 in Resources */,
+				8438205E21F446C700A30FA3 /* TestWebView.html in Resources */,
+				8438205A21F443FB00A30FA3 /* dynamic.gif in Resources */,
+				8438206A21F4663C00A30FA3 /* test.json in Resources */,
 				844ABC2A21F216F200CCC6C2 /* Assets.xcassets in Resources */,
+				8438206C21F4664200A30FA3 /* test.xml in Resources */,
 				844ABD1521F4245B00CCC6C2 /* 站酷快乐体.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,8 +550,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8438204A21F43F0800A30FA3 /* OneHomeViewController.m in Sources */,
 				844ABC3021F216F200CCC6C2 /* main.m in Sources */,
+				8438204221F43E4000A30FA3 /* MainViewController.m in Sources */,
+				8438205321F43F6100A30FA3 /* FourHomeViewController.m in Sources */,
+				8438203921F43C0700A30FA3 /* BaseViewController.m in Sources */,
+				8438204D21F43F2500A30FA3 /* TwoHomeViewController.m in Sources */,
+				8438203521F43ADE00A30FA3 /* UIColor+Hex.m in Sources */,
+				8438205021F43F4300A30FA3 /* ThreeHomeViewController.m in Sources */,
 				844ABC2221F216F200CCC6C2 /* AppDelegate.m in Sources */,
+				8438206821F45BBD00A30FA3 /* DataManager.m in Sources */,
+				8438203D21F43C5A00A30FA3 /* TestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

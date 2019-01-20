@@ -386,12 +386,22 @@ Base Internationalization和Auto Layout在大部分情况下可以很好的支�
 6. 使用 `[UIFont fontWithName:<#(nonnull NSString *)#> size:<#(CGFloat)#>]` 调用字体。  
    `[UIFont fontWithName:@"Source Han Serif" size:20.0];`
    
+## 添加头文件、分类、扩展
 
-   
-
-
-
-
+1. 头文件：New File... --> iOS --> Source --> Header File
+2. 分类：New File... --> iOS --> Source --> Objective-C File --> Next --> File Type 选择 Category --> Class 选择类名 --> File 输入分类的名字，只需输入你为分类起的名字
+3. File Type 共四个选项 `Empty File` `Category` `Protocol` `Extension`
+4. 扩展：步骤同分类，只需要在 File Type 选择 Extension，扩展只有 `.h` 文件，没有 `.m` 文件
+5. Release 模式去除 NSLog
+  
+  ```
+//消除 Release 模式的 NSLog
+#ifdef DEBUG
+#define NSLog(...) NSLog(__VA_ARGS__)
+#else
+#define NSLog(...)
+#endif
+```
 
 
 

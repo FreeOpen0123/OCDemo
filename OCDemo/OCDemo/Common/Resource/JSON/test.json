@@ -1,0 +1,27 @@
+{
+	"code": 1,
+	"message": "请求成功",
+	"data": [
+	  {
+			"uid": "12345",
+			"name": "张三",
+			"age": 23,
+			"image": "https://img.freeopen.cc/logo.png",
+			"mobile": "18512345678"
+		},
+		{
+			"uid": "67890",
+			"name": "小明",
+			"age": 35,
+			"image": "https://img.freeopen.cc/logo.png",
+			"mobile": "15807654321"
+		},
+		{
+			"uid": "15463",
+			"name": "Tom",
+			"age": 76,
+			"image": "https://img.freeopen.cc/logo.png",
+			"mobile": "1-222-333-4444"
+		}
+	]
+}
