@@ -403,6 +403,23 @@ Base Internationalization和Auto Layout在大部分情况下可以很好的支�
 #endif
 ```
 
+## GitHub 自动识别语言不准确修改方法
+
+GitHub 识别语言是根据仓库中使用最多的语言类型，没有直接修改的设置，`README.md` 文本过多，就会被识别为 `HTML` 。
+
+在仓库根目录下新建 `.gitattributes` 文件，添加以下代码：
+
+```
+*.js linguist-language=Objective-C
+*.css linguist-language=Objective-C
+*.html linguist-language=Objective-C
+```
+
+这表示将 js、css、html 代码按照 Objective-C 语言统计。
+
+
+
+
 
 
 
