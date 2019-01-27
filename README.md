@@ -446,8 +446,18 @@ Now you can import your dependencies e.g.:
 
 >\#import &lt;Reachability/Reachability.h&gt;
 
+## 创建代码片段
 
+将需要创建的代码块写好，可以使用 `<#name#>` 添加占位符，选中整个代码片段，右键，`Create Code Snippet` 。
 
++ Title：代码块的名字
++ Summary：简介
++ Platform：All
++ Language：Generic
++ Completion Shortcut：快速输入代码
++ Completion Scopes：选择范围
+
+选择 Xcode 左上方的 `{}` 图标，可以找到对应代码块，左键点击可以编辑，键盘 delete 可以删除。
 
 
 
