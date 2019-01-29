@@ -19,6 +19,8 @@
     // Do any additional setup after loading the view.
     
     [self createUI];
+    
+    //[self setTabBarAttribute];
 }
 
 - (void)createUI {
@@ -57,8 +59,28 @@
     
     self.viewControllers = @[oneNavController,twoNavController,threeNavController,fourNavController];
     
-    
 }
+
+// 设置各种属性
+- (void)setTabBarAttribute {
+    
+    // 设置 TabBar 选中文字颜色
+    self.tabBar.tintColor = [UIColor redColor];
+    
+    // 设置某个 item 字体
+    [threeItem setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15.0],NSForegroundColorAttributeName:[UIColor greenColor]} forState:UIControlStateNormal];
+    
+    // 设置 TabBar 背景色
+    UIView *bgView = [[UIView alloc]initWithFrame:self.tabBar.bounds];
+    bgView.backgroundColor = [UIColor brownColor];
+    [self.tabBar insertSubview:bgView atIndex:0];
+    //self.tabBar.opaque = NO;
+    
+    // 设置红点提醒
+    twoHomeViewController.tabBarItem.badgeValue = @"任意文字或者空";
+}
+
+
 
 
 /*
