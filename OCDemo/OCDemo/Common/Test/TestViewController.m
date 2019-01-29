@@ -19,7 +19,15 @@
     // Do any additional setup after loading the view.
     
     self.title = @"测试";
+    
+    [self test];
 }
+
+- (void)test {
+    
+    
+}
+
 
 /*
 #pragma mark - Navigation

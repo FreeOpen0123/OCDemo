@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7FC081A5F8171FB3F17B8553 /* libPods-OCDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D1576118C5171FACACE59F8E /* libPods-OCDemo.a */; };
+		8408A386220045070048EC6C /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8408A385220045070048EC6C /* UIView+Layout.m */; };
+		8408A389220045390048EC6C /* UIViewController+BackButtonHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 8408A388220045390048EC6C /* UIViewController+BackButtonHandler.m */; };
+		8408A38C2200546B0048EC6C /* Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8408A38B2200546B0048EC6C /* Helper.m */; };
 		8438203521F43ADE00A30FA3 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203421F43ADE00A30FA3 /* UIColor+Hex.m */; };
 		8438203921F43C0700A30FA3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203821F43C0700A30FA3 /* BaseViewController.m */; };
 		8438203D21F43C5A00A30FA3 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203C21F43C5A00A30FA3 /* TestViewController.m */; };
@@ -62,6 +65,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8408A384220045070048EC6C /* UIView+Layout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		8408A385220045070048EC6C /* UIView+Layout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		8408A387220045390048EC6C /* UIViewController+BackButtonHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BackButtonHandler.h"; sourceTree = "<group>"; };
+		8408A388220045390048EC6C /* UIViewController+BackButtonHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BackButtonHandler.m"; sourceTree = "<group>"; };
+		8408A38A2200546B0048EC6C /* Helper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Helper.h; sourceTree = "<group>"; };
+		8408A38B2200546B0048EC6C /* Helper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Helper.m; sourceTree = "<group>"; };
 		8438203221F43A7F00A30FA3 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		8438203321F43ADE00A30FA3 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		8438203421F43ADE00A30FA3 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
@@ -425,6 +434,8 @@
 		844ABCDE21F378B800CCC6C2 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				8408A38A2200546B0048EC6C /* Helper.h */,
+				8408A38B2200546B0048EC6C /* Helper.m */,
 				8438206621F45BBD00A30FA3 /* DataManager.h */,
 				8438206721F45BBD00A30FA3 /* DataManager.m */,
 			);
@@ -469,6 +480,10 @@
 			children = (
 				8438203321F43ADE00A30FA3 /* UIColor+Hex.h */,
 				8438203421F43ADE00A30FA3 /* UIColor+Hex.m */,
+				8408A384220045070048EC6C /* UIView+Layout.h */,
+				8408A385220045070048EC6C /* UIView+Layout.m */,
+				8408A387220045390048EC6C /* UIViewController+BackButtonHandler.h */,
+				8408A388220045390048EC6C /* UIViewController+BackButtonHandler.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -683,6 +698,7 @@
 				8438205321F43F6100A30FA3 /* FourHomeViewController.m in Sources */,
 				8438203921F43C0700A30FA3 /* BaseViewController.m in Sources */,
 				8438204D21F43F2500A30FA3 /* TwoHomeViewController.m in Sources */,
+				8408A386220045070048EC6C /* UIView+Layout.m in Sources */,
 				844B9447220042DC0050F982 /* BaseTableView.m in Sources */,
 				844B943122003FD90050F982 /* BaseNavigationController.m in Sources */,
 				8438203521F43ADE00A30FA3 /* UIColor+Hex.m in Sources */,
@@ -693,7 +709,9 @@
 				8438206821F45BBD00A30FA3 /* DataManager.m in Sources */,
 				844B9438220041FC0050F982 /* BaseLabel.m in Sources */,
 				844B9444220042B40050F982 /* BaseScrollView.m in Sources */,
+				8408A38C2200546B0048EC6C /* Helper.m in Sources */,
 				8438203D21F43C5A00A30FA3 /* TestViewController.m in Sources */,
+				8408A389220045390048EC6C /* UIViewController+BackButtonHandler.m in Sources */,
 				844B943B220042300050F982 /* BaseButton.m in Sources */,
 				844B942E22003F750050F982 /* BaseView.m in Sources */,
 			);
