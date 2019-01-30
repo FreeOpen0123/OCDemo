@@ -7,9 +7,16 @@
 */
 
 
+// Tab Bar
 "one" = "one";
 "two" = "two";
 "three" = "three";
 "four" = "four";
 
+"HomePage" = "HomePage";
+"SecondPage" = "SecondPage";
+"ThirdPage" = "ThirdPage";
+"FourthPage" = "FourthPage";
+
 "button" = "button";
+"back" = "back";

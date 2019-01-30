@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"第四页";
+    self.title = NSLocalizedString(@"FourthPage", nil);
 }
 
 /*

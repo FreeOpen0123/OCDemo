@@ -20,7 +20,7 @@
 		8438205021F43F4300A30FA3 /* ThreeHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438204F21F43F4300A30FA3 /* ThreeHomeViewController.m */; };
 		8438205321F43F6100A30FA3 /* FourHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438205221F43F6100A30FA3 /* FourHomeViewController.m */; };
 		8438205A21F443FB00A30FA3 /* dynamic.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8438205921F443FB00A30FA3 /* dynamic.gif */; };
-		8438205E21F446C700A30FA3 /* TestWebView.html in Resources */ = {isa = PBXBuildFile; fileRef = 8438205D21F446C700A30FA3 /* TestWebView.html */; };
+		8438205E21F446C700A30FA3 /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 8438205D21F446C700A30FA3 /* test.html */; };
 		8438206021F448AA00A30FA3 /* Windbell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8438205F21F448AA00A30FA3 /* Windbell.mp3 */; };
 		8438206821F45BBD00A30FA3 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438206721F45BBD00A30FA3 /* DataManager.m */; };
 		8438206A21F4663C00A30FA3 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 8438206921F4663C00A30FA3 /* test.json */; };
@@ -45,6 +45,8 @@
 		844B9444220042B40050F982 /* BaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844B9443220042B40050F982 /* BaseScrollView.m */; };
 		844B9447220042DC0050F982 /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844B9446220042DC0050F982 /* BaseTableView.m */; };
 		844B944A220042F30050F982 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 844B9449220042F30050F982 /* BaseTableViewCell.m */; };
+		84C782312201C22500C7975F /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C782302201C22500C7975F /* WebViewController.m */; };
+		84C782342201C25A00C7975F /* CustomWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C782332201C25A00C7975F /* CustomWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,7 +91,7 @@
 		8438205121F43F6100A30FA3 /* FourHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FourHomeViewController.h; sourceTree = "<group>"; };
 		8438205221F43F6100A30FA3 /* FourHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FourHomeViewController.m; sourceTree = "<group>"; };
 		8438205921F443FB00A30FA3 /* dynamic.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = dynamic.gif; sourceTree = "<group>"; };
-		8438205D21F446C700A30FA3 /* TestWebView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = TestWebView.html; sourceTree = "<group>"; };
+		8438205D21F446C700A30FA3 /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
 		8438205F21F448AA00A30FA3 /* Windbell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Windbell.mp3; sourceTree = "<group>"; };
 		8438206221F4554700A30FA3 /* Readme.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Readme.h; sourceTree = "<group>"; };
 		8438206621F45BBD00A30FA3 /* DataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
@@ -142,6 +144,10 @@
 		844B9446220042DC0050F982 /* BaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
 		844B9448220042F30050F982 /* BaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		844B9449220042F30050F982 /* BaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		84C7822F2201C22500C7975F /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		84C782302201C22500C7975F /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		84C782322201C25A00C7975F /* CustomWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomWebViewController.h; sourceTree = "<group>"; };
+		84C782332201C25A00C7975F /* CustomWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomWebViewController.m; sourceTree = "<group>"; };
 		9B470786546A2CB89C27F627 /* Pods-OCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OCDemo/Pods-OCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		D1576118C5171FACACE59F8E /* libPods-OCDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-OCDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7A9477992E64A3B3997539 /* Pods-OCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OCDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-OCDemo/Pods-OCDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -331,6 +337,7 @@
 		844ABCD121F3723000CCC6C2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				84C7822E2201C1F300C7975F /* WebView */,
 				844ABCE121F3799D00CCC6C2 /* Test */,
 				844ABCDF21F378E000CCC6C2 /* Header */,
 				844ABCD621F3736000CCC6C2 /* Localized */,
@@ -346,7 +353,7 @@
 				844ABCE221F37A3700CCC6C2 /* XML */,
 				844ABCD821F3761500CCC6C2 /* FontFile */,
 				844ABCD921F3761D00CCC6C2 /* Image */,
-				844ABCDB21F3762600CCC6C2 /* Web */,
+				844ABCDB21F3762600CCC6C2 /* HTML */,
 				844ABCDA21F3762200CCC6C2 /* Media */,
 			);
 			path = Resource;
@@ -423,12 +430,12 @@
 			path = Media;
 			sourceTree = "<group>";
 		};
-		844ABCDB21F3762600CCC6C2 /* Web */ = {
+		844ABCDB21F3762600CCC6C2 /* HTML */ = {
 			isa = PBXGroup;
 			children = (
-				8438205D21F446C700A30FA3 /* TestWebView.html */,
+				8438205D21F446C700A30FA3 /* test.html */,
 			);
-			path = Web;
+			path = HTML;
 			sourceTree = "<group>";
 		};
 		844ABCDE21F378B800CCC6C2 /* Utility */ = {
@@ -497,6 +504,17 @@
 				844ABC9721F22A6700CCC6C2 /* OCDemo-Prefix.pch */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84C7822E2201C1F300C7975F /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				84C7822F2201C22500C7975F /* WebViewController.h */,
+				84C782302201C22500C7975F /* WebViewController.m */,
+				84C782322201C25A00C7975F /* CustomWebViewController.h */,
+				84C782332201C25A00C7975F /* CustomWebViewController.m */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -611,7 +629,7 @@
 				844ABD0221F399DB00CCC6C2 /* Localizable.strings in Resources */,
 				844ABCFD21F399C600CCC6C2 /* InfoPlist.strings in Resources */,
 				8438206021F448AA00A30FA3 /* Windbell.mp3 in Resources */,
-				8438205E21F446C700A30FA3 /* TestWebView.html in Resources */,
+				8438205E21F446C700A30FA3 /* test.html in Resources */,
 				8438205A21F443FB00A30FA3 /* dynamic.gif in Resources */,
 				8438206A21F4663C00A30FA3 /* test.json in Resources */,
 				844ABC2A21F216F200CCC6C2 /* Assets.xcassets in Resources */,
@@ -710,7 +728,9 @@
 				844B9438220041FC0050F982 /* BaseLabel.m in Sources */,
 				844B9444220042B40050F982 /* BaseScrollView.m in Sources */,
 				8408A38C2200546B0048EC6C /* Helper.m in Sources */,
+				84C782342201C25A00C7975F /* CustomWebViewController.m in Sources */,
 				8438203D21F43C5A00A30FA3 /* TestViewController.m in Sources */,
+				84C782312201C22500C7975F /* WebViewController.m in Sources */,
 				8408A389220045390048EC6C /* UIViewController+BackButtonHandler.m in Sources */,
 				844B943B220042300050F982 /* BaseButton.m in Sources */,
 				844B942E22003F750050F982 /* BaseView.m in Sources */,

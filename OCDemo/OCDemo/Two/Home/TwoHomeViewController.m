@@ -18,7 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"次页";
+    self.title = NSLocalizedString(@"SecondPage", nil);
 }
 
 /*

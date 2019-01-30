@@ -7,7 +7,16 @@
 */
 
 
+// Tab Bar
 "one" = "壹";
 "two" = "贰";
 "three" = "叁";
 "four" = "肆";
+
+"HomePage" = "首頁";
+"SecondPage" = "次頁";
+"ThirdPage" = "第三頁";
+"FourthPage" = "第四頁";
+
+"button" = "按鈕";
+"back" = "返回";

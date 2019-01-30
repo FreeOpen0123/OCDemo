@@ -6,6 +6,42 @@
   Copyright © 2019 This is my code. All rights reserved.
 */
 
+
+// 应用名
 "CFBundleDisplayName" = "MyDemo";
 
-"NSPhotoLibraryUsageDescription" = "Used to open photos";
+// 定位
+"NSLocationUsageDescription" = "We need to use your location";
+"NSLocationWhenInUseUsageDescription" = "Gets your location during application usage";
+"NSLocationAlwaysUsageDescription" = "Always get your location (iOS11 has been degraded to use)";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "Always get location information";
+// 通讯录
+"NSContactsUsageDescription" = "We need access to the address book";
+// 日历
+"NSCalendarsUsageDescription" = "We need access to the calendar";
+// 提醒事项
+"NSRemindersUsageDescription" = "We need access to reminders";
+// 照片
+"NSPhotoLibraryUsageDescription" = "We need to read and write photos";
+"NSPhotoLibraryAddUsageDescription" = "We need to add photos";
+// 蓝牙共享
+"NSBluetoothPeripheralUsageDescription" = "Use a bluetooth";
+// 麦克风
+"NSMicrophoneUsageDescription" = "Use a microphone";
+// 语音识别
+"NSSpeechRecognitionUsageDescription" = "Using speech recognition";
+// 相机
+"NSCameraUsageDescription" = "Use the camera";
+// 健康
+"NSHealthShareUsageDescription" = "Read health data";
+"NSHealthUpdateUsageDescription" = "Write health data";
+// HomeKit
+"NSHomeKitUsageDescription" = "Access to residential data";
+// 媒体与 Apple Music
+"NSAppleMusicUsageDescription" = "Access media database";
+// 运动与健身
+"NSMotionUsageDescription" = "Read exercise and fitness data";
+// Siri
+"NSSiriUsageDescription" = "Use Siri";
+
+

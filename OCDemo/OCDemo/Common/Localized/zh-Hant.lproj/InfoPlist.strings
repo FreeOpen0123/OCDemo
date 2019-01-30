@@ -7,4 +7,41 @@
 */
 
 
+// 应用名
 "CFBundleDisplayName" = "演示代碼";
+
+// 定位
+"NSLocationUsageDescription" = "需要使用您的位置";
+"NSLocationWhenInUseUsageDescription" = "在應用使用期間獲取您的位置";
+"NSLocationAlwaysUsageDescription" = "始終獲取您的位置（iOS11 已降級為使用期間）";
+"NSLocationAlwaysAndWhenInUseUsageDescription" = "始終獲取位置資訊";
+// 通讯录
+"NSContactsUsageDescription" = "需要訪問通訊錄";
+// 日历
+"NSCalendarsUsageDescription" = "需要訪問日曆";
+// 提醒事项
+"NSRemindersUsageDescription" = "需要訪問提醒事項";
+// 照片
+"NSPhotoLibraryUsageDescription" = "需要讀寫照片";
+"NSPhotoLibraryAddUsageDescription" = "需要添加照片";
+// 蓝牙共享
+"NSBluetoothPeripheralUsageDescription" = "使用藍牙";
+// 麦克风
+"NSMicrophoneUsageDescription" = "使用麥克風";
+// 语音识别
+"NSSpeechRecognitionUsageDescription" = "使用語音辨識";
+// 相机
+"NSCameraUsageDescription" = "使用相機";
+// 健康
+"NSHealthShareUsageDescription" = "讀取健康資料";
+"NSHealthUpdateUsageDescription" = "寫入健康資料";
+// HomeKit
+"NSHomeKitUsageDescription" = "訪問住宅資料";
+// 媒体与 Apple Music
+"NSAppleMusicUsageDescription" = "訪問媒體資料庫";
+// 运动与健身
+"NSMotionUsageDescription" = "讀取運動與健身資料";
+// Siri
+"NSSiriUsageDescription" = "使用 Siri";
+
+

@@ -1,24 +1,22 @@
 //
-//  ThreeHomeViewController.m
+//  WebViewController.m
 //  OCDemo
 //
-//  Created by Admin on 2019/1/20.
+//  Created by Admin on 2019/1/30.
 //  Copyright © 2019 This is my code. All rights reserved.
 //
 
-#import "ThreeHomeViewController.h"
+#import "WebViewController.h"
 
-@interface ThreeHomeViewController ()
+@interface WebViewController ()
 
 @end
 
-@implementation ThreeHomeViewController
+@implementation WebViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    self.title = NSLocalizedString(@"ThirdPage", nil);
 }
 
 /*
