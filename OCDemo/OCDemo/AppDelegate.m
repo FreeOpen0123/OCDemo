@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 
-#import "MainViewController.h"
+#import "TabBarViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +24,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    self.window.rootViewController = [[MainViewController alloc]init];
+    self.window.rootViewController = [[TabBarViewController alloc]init];
     
     
     NSLog(@"didFinishLaunchingWithOptions");
@@ -68,6 +68,10 @@
     
     NSLog(@"applicationWillTerminate");
 }
+
+
+//-------------------------------------------------
+
 
 
 @end

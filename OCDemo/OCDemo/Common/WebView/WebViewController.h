@@ -11,6 +11,12 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WebViewController : BaseViewController
+{
+    
+}
+
+@property(nonatomic,copy)NSString *titleStr;
+@property(nonatomic,copy)NSString *urlStr;
 
 @end
 

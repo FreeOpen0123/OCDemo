@@ -1,25 +1,26 @@
 //
-//  WebViewController.m
+//  LifecycleViewController.m
 //  OCDemo
 //
-//  Created by Admin on 2019/1/30.
+//  Created by Admin on 2019/2/17.
 //  Copyright © 2019 This is my code. All rights reserved.
 //
 
-#import "WebViewController.h"
+#import "LifecycleViewController.h"
 
-@interface WebViewController ()
+@interface LifecycleViewController ()
 
 @end
 
-@implementation WebViewController
+@implementation LifecycleViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"WKWebView";
+    self.title = @"Lifecycle";
 }
+
 
 
 

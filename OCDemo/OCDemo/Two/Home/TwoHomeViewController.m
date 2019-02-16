@@ -8,6 +8,9 @@
 
 #import "TwoHomeViewController.h"
 
+#import "WebViewController.h"
+#import "TwoListViewController.h"
+
 @interface TwoHomeViewController ()
 
 @end
@@ -19,7 +22,52 @@
     // Do any additional setup after loading the view.
     
     self.title = NSLocalizedString(@"SecondPage", nil);
+    
+    [self createUI];
 }
+
+#pragma mark - 创建界面
+- (void)createUI {
+    
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc]initWithTitle:@"测试" style:UIBarButtonItemStylePlain target:self action:@selector(rightButtonClick:)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
+    button.backgroundColor = [UIColor lightGrayColor];
+    [button setTitle:@"系统方法" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    button.layer.cornerRadius = 3.0;
+    [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:button];
+    
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.centerY.equalTo(self.view.mas_centerY);
+        
+        make.size.mas_equalTo(CGSizeMake(100, 50));
+    }];
+}
+
+#pragma mark - 点击按钮
+- (void)buttonClick:(UIButton *)button {
+    
+    TwoListViewController *vc = [[TwoListViewController alloc]init];
+    
+    vc.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)rightButtonClick:(UIButton *)button {
+    
+    WebViewController *webVC = [[WebViewController alloc]init];
+    
+    webVC.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:webVC animated:YES];
+}
+
 
 /*
 #pragma mark - Navigation

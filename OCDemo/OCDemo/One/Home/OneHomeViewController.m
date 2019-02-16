@@ -10,6 +10,8 @@
 
 #import "TestViewController.h"
 
+#import "OneListViewController.h"
+
 @interface OneHomeViewController ()
 
 @end
@@ -28,15 +30,38 @@
 #pragma mark - 创建界面
 - (void)createUI {
     
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc]initWithTitle:@"测试" style:UIBarButtonItemStylePlain target:self action:@selector(rightButtonClick:)];
+    self.navigationItem.rightBarButtonItem = rightButton;
+    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
-    button.frame = CGRectMake(100, 200, 100, 50);
+    //button.frame = CGRectMake(100, 200, 100, 50);
     button.backgroundColor = [UIColor lightGrayColor];
-    [button setTitle:@"点我" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"基础" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    button.layer.cornerRadius = 3.0;
+    [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
+    
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.centerY.equalTo(self.view.mas_centerY);
+        
+        make.size.mas_equalTo(CGSizeMake(100, 50));
+    }];
 }
 
-- (void)buttonClick {
+#pragma mark - 点击按钮
+- (void)buttonClick:(UIButton *)button {
+    
+    OneListViewController *vc = [[OneListViewController alloc]init];
+    
+    vc.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)rightButtonClick:(UIButton *)button {
     
     TestViewController *testVC = [[TestViewController alloc]init];
     

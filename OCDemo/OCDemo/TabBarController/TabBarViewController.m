@@ -6,17 +6,19 @@
 //  Copyright © 2019 This is my code. All rights reserved.
 //
 
-#import "MainViewController.h"
+#import "TabBarViewController.h"
 
-@interface MainViewController ()
+@interface TabBarViewController ()<UITabBarControllerDelegate>
 
 @end
 
-@implementation MainViewController
+@implementation TabBarViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //self.delegate = self;
     
     [self createUI];
     
@@ -59,6 +61,7 @@
     
     self.viewControllers = @[oneNavController,twoNavController,threeNavController,fourNavController];
     
+    //self.selectedIndex = 2;
 }
 
 // 设置各种属性
@@ -80,7 +83,13 @@
     twoHomeViewController.tabBarItem.badgeValue = @"任意文字或者空";
 }
 
-
+#pragma mark - UITabBarControllerDelegate
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController {
+    
+    NSLog(@"selectedIndex = %lu",(unsigned long)self.selectedIndex);
+    
+    return YES;
+}
 
 
 /*
