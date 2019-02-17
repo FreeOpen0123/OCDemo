@@ -9,6 +9,7 @@
 #import "OneListViewController.h"
 
 #import "LifecycleViewController.h"
+#import "SizeViewController.h"
 
 @interface OneListViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -24,7 +25,7 @@
     
     self.title = @"基础列表";
     
-    titleArray = @[@"Lifecycle",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18",@"19",@"20",@"21",@"22",@"23",@"24",@"25"];
+    titleArray = @[@"Lifecycle",@"Size",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18",@"19",@"20",@"21",@"22",@"23",@"24",@"25"];
     
     [self createUI];
 }
@@ -70,8 +71,6 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"点击第 %li 行了",indexPath.row);
-    
     switch (indexPath.row) {
         case 0:
         {
@@ -81,9 +80,35 @@
         }
             break;
             
+        case 1:
+        {
+            SizeViewController *vc = [[SizeViewController alloc]init];
+            
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
+        case 2:
+        {
+            
+        }
+            break;
+            
+        case 3:
+        {
+            
+        }
+            break;
+            
+        case 4:
+        {
+            
+        }
+            break;
+            
         default:
             
-            NSLog(@"点击了空行");
+            NSLog(@"点击第 %li 行了",indexPath.row);
             
             break;
     }

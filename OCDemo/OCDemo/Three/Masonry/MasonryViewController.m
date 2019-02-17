@@ -1,39 +1,24 @@
 //
-//  TestViewController.m
+//  MasonryViewController.m
 //  OCDemo
 //
-//  Created by Admin on 2019/1/20.
+//  Created by Admin on 2019/2/17.
 //  Copyright © 2019 This is my code. All rights reserved.
 //
 
-#import "TestViewController.h"
+#import "MasonryViewController.h"
 
-@interface TestViewController ()
+@interface MasonryViewController ()
 
 @end
 
-@implementation TestViewController
+@implementation MasonryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"测试";
-    
-    [self test];
-}
-
-- (void)test {
-    
-    
-}
-
-
-- (BOOL)navigationShouldPopOnBackButton {
-    
-    NSLog(@"返回了");
-    
-    return YES;
+    self.title = @"Masonry";
 }
 
 /*

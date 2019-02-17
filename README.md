@@ -460,6 +460,13 @@ Now you can import your dependencies e.g.:
 选择 Xcode 左上方的 `{}` 图标，可以找到对应代码块，左键点击可以编辑，键盘 delete 可以删除。
 
 
+## 将 LaunchImage 改为 LaunchScreen.storyboard
+
+1. 添加 LaunchScreen.storyboard
+2. Targets --> General --> Launch Images Source 改成空，Launch Screen File 改成 LaunchScreen
+3. 将需要的图片添加到 Assets 文件夹
+4. 在 LaunchScreen.storyboard 里不同屏幕添加 ImageView 并设置图片
+
 
 
 
