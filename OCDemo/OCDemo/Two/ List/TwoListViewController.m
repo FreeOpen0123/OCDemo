@@ -8,6 +8,8 @@
 
 #import "TwoListViewController.h"
 
+#import "SystemStateViewController.h"
+
 @interface TwoListViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,strong)UITableView *tableView;
@@ -21,7 +23,7 @@
     
     self.title = @"系统方法列表";
     
-    titleArray = @[@"第一行",@"第二行",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18",@"19",@"20",@"21",@"22",@"23"];
+    titleArray = @[@"System State",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18",@"19",@"20",@"21",@"22",@"23",@"24",@"25"];
     
     [self createUI];
 }
@@ -67,7 +69,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"点击第 %li 行了",indexPath.row);
+    switch (indexPath.row) {
+        case 0:
+        {
+            SystemStateViewController *vc = [[SystemStateViewController alloc]init];
+            
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+            break;
+            
+        default:
+            
+            NSLog(@"点击第 %li 行了",indexPath.row);
+            
+            break;
+    }
 }
 
 

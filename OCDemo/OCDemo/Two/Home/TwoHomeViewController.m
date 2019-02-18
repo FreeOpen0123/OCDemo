@@ -29,7 +29,7 @@
 #pragma mark - 创建界面
 - (void)createUI {
     
-    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc]initWithTitle:@"测试" style:UIBarButtonItemStylePlain target:self action:@selector(rightButtonClick:)];
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc]initWithTitle:@"Web" style:UIBarButtonItemStylePlain target:self action:@selector(rightButtonClick:)];
     self.navigationItem.rightBarButtonItem = rightButton;
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];

@@ -15,6 +15,8 @@
 		840C2DC2221882B400B89088 /* ThreeListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C2DC1221882B400B89088 /* ThreeListViewController.m */; };
 		840C2DC5221882D600B89088 /* FourListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C2DC4221882D600B89088 /* FourListViewController.m */; };
 		840C2DC9221886F100B89088 /* LifecycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C2DC8221886F100B89088 /* LifecycleViewController.m */; };
+		841BEA2C221AA7DC00AFA255 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 841BEA2B221AA7DC00AFA255 /* FMDBManager.m */; };
+		841BEA32221AAFDB00AFA255 /* SystemStateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841BEA31221AAFDB00AFA255 /* SystemStateViewController.m */; };
 		8438203521F43ADE00A30FA3 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203421F43ADE00A30FA3 /* UIColor+Hex.m */; };
 		8438203921F43C0700A30FA3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203821F43C0700A30FA3 /* BaseViewController.m */; };
 		8438203D21F43C5A00A30FA3 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203C21F43C5A00A30FA3 /* TestViewController.m */; };
@@ -49,7 +51,7 @@
 		844B9444220042B40050F982 /* BaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844B9443220042B40050F982 /* BaseScrollView.m */; };
 		844B9447220042DC0050F982 /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844B9446220042DC0050F982 /* BaseTableView.m */; };
 		844B944A220042F30050F982 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 844B9449220042F30050F982 /* BaseTableViewCell.m */; };
-		84C3C92722195230009C50C3 /* SizeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C3C92622195230009C50C3 /* SizeViewController.m */; };
+		84C3C92722195230009C50C3 /* SystemInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C3C92622195230009C50C3 /* SystemInfoViewController.m */; };
 		84C3C9A722198014009C50C3 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C3C9A622198014009C50C3 /* MasonryViewController.m */; };
 		84C782312201C22500C7975F /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C782302201C22500C7975F /* WebViewController.m */; };
 		84C782342201C25A00C7975F /* CustomWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C782332201C25A00C7975F /* CustomWebViewController.m */; };
@@ -90,6 +92,10 @@
 		840C2DC4221882D600B89088 /* FourListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FourListViewController.m; sourceTree = "<group>"; };
 		840C2DC7221886F100B89088 /* LifecycleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LifecycleViewController.h; sourceTree = "<group>"; };
 		840C2DC8221886F100B89088 /* LifecycleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LifecycleViewController.m; sourceTree = "<group>"; };
+		841BEA2A221AA7DC00AFA255 /* FMDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBManager.h; sourceTree = "<group>"; };
+		841BEA2B221AA7DC00AFA255 /* FMDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBManager.m; sourceTree = "<group>"; };
+		841BEA30221AAFDB00AFA255 /* SystemStateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemStateViewController.h; sourceTree = "<group>"; };
+		841BEA31221AAFDB00AFA255 /* SystemStateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemStateViewController.m; sourceTree = "<group>"; };
 		8438203221F43A7F00A30FA3 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		8438203321F43ADE00A30FA3 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		8438203421F43ADE00A30FA3 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
@@ -160,8 +166,8 @@
 		844B9446220042DC0050F982 /* BaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
 		844B9448220042F30050F982 /* BaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		844B9449220042F30050F982 /* BaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
-		84C3C92522195230009C50C3 /* SizeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SizeViewController.h; sourceTree = "<group>"; };
-		84C3C92622195230009C50C3 /* SizeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SizeViewController.m; sourceTree = "<group>"; };
+		84C3C92522195230009C50C3 /* SystemInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemInfoViewController.h; sourceTree = "<group>"; };
+		84C3C92622195230009C50C3 /* SystemInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemInfoViewController.m; sourceTree = "<group>"; };
 		84C3C9A522198014009C50C3 /* MasonryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
 		84C3C9A622198014009C50C3 /* MasonryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasonryViewController.m; sourceTree = "<group>"; };
 		84C7822F2201C22500C7975F /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
@@ -254,6 +260,15 @@
 				840C2DC8221886F100B89088 /* LifecycleViewController.m */,
 			);
 			path = Lifecycle;
+			sourceTree = "<group>";
+		};
+		841BEA2F221AAFA300AFA255 /* SystemState */ = {
+			isa = PBXGroup;
+			children = (
+				841BEA30221AAFDB00AFA255 /* SystemStateViewController.h */,
+				841BEA31221AAFDB00AFA255 /* SystemStateViewController.m */,
+			);
+			path = SystemState;
 			sourceTree = "<group>";
 		};
 		8438204421F43EAE00A30FA3 /* Home */ = {
@@ -386,6 +401,7 @@
 			children = (
 				8438204521F43EC100A30FA3 /* Home */,
 				84C782482207217D00C7975F /*  List */,
+				841BEA2F221AAFA300AFA255 /* SystemState */,
 			);
 			path = Two;
 			sourceTree = "<group>";
@@ -396,7 +412,7 @@
 				8438204421F43EAE00A30FA3 /* Home */,
 				840C2DBA2218820700B89088 /* List */,
 				840C2DC6221886B000B89088 /* Lifecycle */,
-				84C3C9242219521C009C50C3 /* Size */,
+				84C3C9242219521C009C50C3 /* SystemInfo */,
 			);
 			path = One;
 			sourceTree = "<group>";
@@ -513,6 +529,8 @@
 				8408A38B2200546B0048EC6C /* Helper.m */,
 				8438206621F45BBD00A30FA3 /* DataManager.h */,
 				8438206721F45BBD00A30FA3 /* DataManager.m */,
+				841BEA2A221AA7DC00AFA255 /* FMDBManager.h */,
+				841BEA2B221AA7DC00AFA255 /* FMDBManager.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -574,13 +592,13 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		84C3C9242219521C009C50C3 /* Size */ = {
+		84C3C9242219521C009C50C3 /* SystemInfo */ = {
 			isa = PBXGroup;
 			children = (
-				84C3C92522195230009C50C3 /* SizeViewController.h */,
-				84C3C92622195230009C50C3 /* SizeViewController.m */,
+				84C3C92522195230009C50C3 /* SystemInfoViewController.h */,
+				84C3C92622195230009C50C3 /* SystemInfoViewController.m */,
 			);
-			path = Size;
+			path = SystemInfo;
 			sourceTree = "<group>";
 		};
 		84C3C9A422198007009C50C3 /* Masonry */ = {
@@ -822,8 +840,9 @@
 				8438204221F43E4000A30FA3 /* TabBarViewController.m in Sources */,
 				8438205321F43F6100A30FA3 /* FourHomeViewController.m in Sources */,
 				840C2DC9221886F100B89088 /* LifecycleViewController.m in Sources */,
-				84C3C92722195230009C50C3 /* SizeViewController.m in Sources */,
+				84C3C92722195230009C50C3 /* SystemInfoViewController.m in Sources */,
 				8438203921F43C0700A30FA3 /* BaseViewController.m in Sources */,
+				841BEA32221AAFDB00AFA255 /* SystemStateViewController.m in Sources */,
 				84C3C9A722198014009C50C3 /* MasonryViewController.m in Sources */,
 				8438204D21F43F2500A30FA3 /* TwoHomeViewController.m in Sources */,
 				8408A386220045070048EC6C /* UIView+Layout.m in Sources */,
@@ -845,6 +864,7 @@
 				8408A389220045390048EC6C /* UIViewController+BackButtonHandler.m in Sources */,
 				844B943B220042300050F982 /* BaseButton.m in Sources */,
 				840C2DC5221882D600B89088 /* FourListViewController.m in Sources */,
+				841BEA2C221AA7DC00AFA255 /* FMDBManager.m in Sources */,
 				844B942E22003F750050F982 /* BaseView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

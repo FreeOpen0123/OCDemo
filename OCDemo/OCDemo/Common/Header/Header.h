@@ -45,8 +45,7 @@
 #define ColorWithRGB(Red, Green, Blue) [UIColor colorWithRed:(Red) / 255.0 green:(Green) / 255.0 blue:(Blue) / 255.0 alpha:1.0]
 #define ColorWithRGBA(Red, Green, Blue, Alpha) [UIColor colorWithRed:(Red)/255.0 green:(Green)/255.0 blue:(Blue)/255.0 alpha:(Alpha)]
 
-// 常用尺寸
-
+#pragma mark - 常用尺寸
 //屏幕宽
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 //屏幕高
@@ -62,7 +61,8 @@
 //状态栏和导航栏整体高度
 #define STATUS_NAV_HEIGHT (STATUS_BAR_HEIGHT + NAVIGATION_BAR_HEIGHT)
 
-
+#pragma mark - 存储的 key 值
+static NSString *const kInitDic = @"kInitDic";
 
 
 

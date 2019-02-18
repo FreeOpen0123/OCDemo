@@ -27,6 +27,11 @@
     
     self.title = @"WKWebView";
     
+    if (_urlStr != nil) {
+        
+        [_urlStr stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
+    }
+    
     [self createUI];
 }
 
@@ -82,6 +87,14 @@
     NSLog(@"didFailNavigation");
 }
 
+#pragma mark - WKScriptMessageHandler
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
+    
+    NSLog(@"didReceiveScriptMessage");
+}
+
+
+
 #pragma mark - 监听进度条
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     
@@ -118,5 +131,6 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 
 @end

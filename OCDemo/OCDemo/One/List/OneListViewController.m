@@ -9,7 +9,7 @@
 #import "OneListViewController.h"
 
 #import "LifecycleViewController.h"
-#import "SizeViewController.h"
+#import "SystemInfoViewController.h"
 
 @interface OneListViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -25,7 +25,7 @@
     
     self.title = @"基础列表";
     
-    titleArray = @[@"Lifecycle",@"Size",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18",@"19",@"20",@"21",@"22",@"23",@"24",@"25"];
+    titleArray = @[@"Lifecycle",@"System Info",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16",@"17",@"18",@"19",@"20",@"21",@"22",@"23",@"24",@"25"];
     
     [self createUI];
 }
@@ -82,7 +82,7 @@
             
         case 1:
         {
-            SizeViewController *vc = [[SizeViewController alloc]init];
+            SystemInfoViewController *vc = [[SystemInfoViewController alloc]init];
             
             [self.navigationController pushViewController:vc animated:YES];
         }

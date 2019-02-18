@@ -1,8 +1,8 @@
 //
-//  SizeViewController.h
+//  SystemStateViewController.h
 //  OCDemo
 //
-//  Created by Admin on 2019/2/17.
+//  Created by Admin on 2019/2/18.
 //  Copyright © 2019 This is my code. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SizeViewController : BaseViewController
+@interface SystemStateViewController : BaseViewController
 
 @end
 

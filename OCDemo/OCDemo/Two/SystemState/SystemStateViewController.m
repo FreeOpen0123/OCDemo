@@ -1,40 +1,32 @@
 //
-//  TestViewController.m
+//  SystemStateViewController.m
 //  OCDemo
 //
-//  Created by Admin on 2019/1/20.
+//  Created by Admin on 2019/2/18.
 //  Copyright © 2019 This is my code. All rights reserved.
 //
 
-#import "TestViewController.h"
-#import "FMDBManager.h"
-@interface TestViewController ()
+#import "SystemStateViewController.h"
+
+@interface SystemStateViewController ()
 
 @end
 
-@implementation TestViewController
+@implementation SystemStateViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.title = @"测试";
-    
-    [self test];
-}
-
-- (void)test {
+    self.title = @"System State";
     
     
 }
 
 
-- (BOOL)navigationShouldPopOnBackButton {
-    
-    NSLog(@"返回了");
-    
-    return YES;
-}
+
+
+
 
 /*
 #pragma mark - Navigation
