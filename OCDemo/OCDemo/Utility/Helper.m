@@ -54,5 +54,39 @@
     [userDefaults removeObjectForKey:key];
 }
 
+#pragma mark - 生成随机颜色
++ (UIColor *)randomColor {
+    
+    //得到 0.00 - 255.00 之间的浮点数
+    CGFloat r = arc4random()%25501 / 100.0;
+    
+    CGFloat g = arc4random()%25501 / 100.0;
+    
+    CGFloat b = arc4random()%25501 / 100.0;
+    
+    UIColor *color = [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1.0];
+    
+    return color;
+}
+
++ (UIColor *)randomColorWithAlpha {
+    
+    CGFloat r = arc4random()%25501 / 100.0;
+    
+    CGFloat g = arc4random()%25501 / 100.0;
+    
+    CGFloat b = arc4random()%25501 / 100.0;
+    
+    CGFloat a = arc4random()%101 /100.0;
+    
+    UIColor *color = [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a];
+    
+    return color;
+}
+
+
+
+
+
 
 @end

@@ -41,7 +41,25 @@
 
 - (void)createDatabaseWithName:(NSString *)name {
     
+    NSString *sandboxStr = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
     
+    NSString *myPath = [NSString stringWithFormat:@"%@/FMDB/",sandboxStr];
+    
+    NSFileManager *manager = [NSFileManager defaultManager];
+    
+    [manager createDirectoryAtPath:myPath withIntermediateDirectories:YES attributes:nil error:nil];
+    
+    NSString *path = [NSString stringWithFormat:@"%@%@.db",myPath,name];
+    
+    _database = [FMDatabase databaseWithPath:path];
+    
+    if ([_database open]) {
+        
+        NSLog(@"打开数据库成功");
+    }else {
+        
+        NSLog(@"打开数据库失败");
+    }
 }
 
 

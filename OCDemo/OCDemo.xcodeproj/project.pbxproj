@@ -17,6 +17,7 @@
 		840C2DC9221886F100B89088 /* LifecycleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 840C2DC8221886F100B89088 /* LifecycleViewController.m */; };
 		841BEA2C221AA7DC00AFA255 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 841BEA2B221AA7DC00AFA255 /* FMDBManager.m */; };
 		841BEA32221AAFDB00AFA255 /* SystemStateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841BEA31221AAFDB00AFA255 /* SystemStateViewController.m */; };
+		841BEA3A221ACD8600AFA255 /* InfoSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = 841BEA39221ACD8600AFA255 /* InfoSecurity.m */; };
 		8438203521F43ADE00A30FA3 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203421F43ADE00A30FA3 /* UIColor+Hex.m */; };
 		8438203921F43C0700A30FA3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203821F43C0700A30FA3 /* BaseViewController.m */; };
 		8438203D21F43C5A00A30FA3 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203C21F43C5A00A30FA3 /* TestViewController.m */; };
@@ -96,6 +97,8 @@
 		841BEA2B221AA7DC00AFA255 /* FMDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBManager.m; sourceTree = "<group>"; };
 		841BEA30221AAFDB00AFA255 /* SystemStateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemStateViewController.h; sourceTree = "<group>"; };
 		841BEA31221AAFDB00AFA255 /* SystemStateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemStateViewController.m; sourceTree = "<group>"; };
+		841BEA38221ACD8600AFA255 /* InfoSecurity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoSecurity.h; sourceTree = "<group>"; };
+		841BEA39221ACD8600AFA255 /* InfoSecurity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoSecurity.m; sourceTree = "<group>"; };
 		8438203221F43A7F00A30FA3 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		8438203321F43ADE00A30FA3 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		8438203421F43ADE00A30FA3 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
@@ -531,6 +534,8 @@
 				8438206721F45BBD00A30FA3 /* DataManager.m */,
 				841BEA2A221AA7DC00AFA255 /* FMDBManager.h */,
 				841BEA2B221AA7DC00AFA255 /* FMDBManager.m */,
+				841BEA38221ACD8600AFA255 /* InfoSecurity.h */,
+				841BEA39221ACD8600AFA255 /* InfoSecurity.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -836,6 +841,7 @@
 				84C7824B220721CE00C7975F /* TwoListViewController.m in Sources */,
 				840C2DC2221882B400B89088 /* ThreeListViewController.m in Sources */,
 				844ABC3021F216F200CCC6C2 /* main.m in Sources */,
+				841BEA3A221ACD8600AFA255 /* InfoSecurity.m in Sources */,
 				844B943E2200425F0050F982 /* BaseTextField.m in Sources */,
 				8438204221F43E4000A30FA3 /* TabBarViewController.m in Sources */,
 				8438205321F43F6100A30FA3 /* FourHomeViewController.m in Sources */,

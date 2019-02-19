@@ -28,7 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 //移除Plist数据
 + (void)removePlistObjectForKey:(NSString *)key;
 
-
+//生成随机颜色
++ (UIColor *)randomColor;
++ (UIColor *)randomColorWithAlpha;
 
 
 
