@@ -10,7 +10,16 @@
 
 #import <CommonCrypto/CommonCrypto.h>
 
+#define RSAKeySize 2048
+
 @implementation InfoSecurity
+
+{
+    // 公钥
+    SecKeyRef publicKeyRef;
+    // 私钥
+    SecKeyRef privateKeyRef;
+}
 
 #pragma mark - MD5
 + (NSString *)getMD5:(NSString *)string {
@@ -180,6 +189,88 @@
     
     return[[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
 }
+
+#pragma mark - 生成 RSA 密钥对
+- (void)generateRSAKeyPair {
+    
+    OSStatus ret = 0;
+    
+    publicKeyRef = NULL;
+    
+    privateKeyRef = NULL;
+    
+    //SecKeyGeneratePair(<#CFDictionaryRef  _Nonnull parameters#>, <#SecKeyRef  _Nullable * _Nullable publicKey#>, <#SecKeyRef  _Nullable * _Nullable privateKey#>)
+    ret = SecKeyGeneratePair((CFDictionaryRef)@{(id)kSecAttrKeyType:(id)kSecAttrKeyTypeRSA,(id)kSecAttrKeySizeInBits:@(RSAKeySize)}, &publicKeyRef, &privateKeyRef);
+    
+    NSAssert(ret == errSecSuccess, @"密钥对生成失败：%d",ret);
+    
+    //NSLog(@"publicKeyRef = %@",publicKeyRef);
+    //NSLog(@"privateKeyRef = %@",privateKeyRef);
+    NSLog(@"max size = %lu",SecKeyGetBlockSize(privateKeyRef));
+}
+
+#pragma mark - 获取 RSA 公钥
+- (SecKeyRef)getRSAPublicKey {
+    
+    return publicKeyRef;
+}
+
+#pragma mark - 获取 RSA 私钥
+- (SecKeyRef)getRSAPrivateKey {
+    
+    return privateKeyRef;
+}
+
+#pragma mark - RSA 加密
+- (NSString *)RSAEncryptWithString:(NSString *)string {
+    
+    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+    
+    return [self RSAEncryptWithData:data];
+}
+
+- (NSString *)RSAEncryptWithData:(NSData *)data {
+    
+    uint8_t encryptData[RSAKeySize / 8] = {0};
+    size_t blockSize = RSAKeySize / 8;
+    
+    OSStatus ret;
+    
+    //SecKeyEncrypt(<#SecKeyRef  _Nonnull key#>, <#SecPadding padding#>, <#const uint8_t * _Nonnull plainText#>, <#size_t plainTextLen#>, <#uint8_t * _Nonnull cipherText#>, <#size_t * _Nonnull cipherTextLen#>)
+    ret = SecKeyEncrypt(publicKeyRef, kSecPaddingNone, data.bytes, data.length, encryptData, &blockSize);
+    NSAssert(ret == errSecSuccess, @"加密失败 %d",ret);
+    
+    NSData *resultData = [NSData dataWithBytes:encryptData length:blockSize];
+    
+    NSString *result = [resultData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
+    
+    return result;
+}
+
+#pragma mark - RSA 解密
+- (NSString *)RSADecryptWithBase64String:(NSString *)string {
+    
+    //密文
+    //uint8_t encryptData[RSAKeySize / 8] = {0};
+    
+    NSData *data = [[NSData alloc]initWithBase64EncodedString:string options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    
+    uint8_t decryptData[RSAKeySize / 8] = {0};
+    
+    size_t blockSize = RSAKeySize / 8;
+    
+    OSStatus ret;
+    
+    //SecKeyDecrypt(<#SecKeyRef  _Nonnull key#>, <#SecPadding padding#>, <#const uint8_t * _Nonnull cipherText#>, <#size_t cipherTextLen#>, <#uint8_t * _Nonnull plainText#>, <#size_t * _Nonnull plainTextLen#>)
+    ret = SecKeyDecrypt(privateKeyRef, kSecPaddingNone, data.bytes, blockSize, decryptData, &blockSize);
+    
+    NSAssert(ret == errSecSuccess, @"解密失败 %d",ret);
+    
+    NSString *result = [NSString stringWithUTF8String:decryptData];
+    
+    return result;
+}
+
 
 
 @end

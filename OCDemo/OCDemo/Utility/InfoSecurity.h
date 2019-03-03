@@ -66,9 +66,33 @@ NS_ASSUME_NONNULL_BEGIN
 + (NSData *)base64DecodedForDataWithString:(NSString *)string;
 + (NSString *)base64DecodedWithString:(NSString *)string;
 
-// RSA
 
 
+/**
+ 生成 RSA 密钥对，密钥长度 512, 768, 1024, 2048.
+ */
+- (void)generateRSAKeyPair;
+
+/**
+ 获取生成的 RSA 密钥，需要先生成再获取
+
+ @return 密钥
+ */
+- (SecKeyRef)getRSAPublicKey;
+- (SecKeyRef)getRSAPrivateKey;
+
+
+/**
+ RSA 加密
+
+ @param string 要加密的字符串
+ @return 加密结果，Base64格式
+ */
+- (NSString *)RSAEncryptWithString:(NSString *)string;
+- (NSString *)RSAEncryptWithData:(NSData *)data;
+
+
+- (NSString *)RSADecryptWithBase64String:(NSString *)string;
 
 @end
 
