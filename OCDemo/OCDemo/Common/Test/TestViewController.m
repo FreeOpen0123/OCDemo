@@ -8,8 +8,6 @@
 
 #import "TestViewController.h"
 
-#import "InfoSecurity.h"
-
 @interface TestViewController ()
 
 @end
@@ -56,12 +54,24 @@
 #pragma mark - 点击事件
 - (void)buttonClick:(UIButton *)button {
     
-    InfoSecurity *info = [[InfoSecurity alloc]init];
-    [info generateRSAKeyPair];
+    NSString *urlStr = @"http://baike.baidu.com/api/openapi/BaikeLemmaCardApi";
     
-    NSString *str = [info RSAEncryptWithString:@"abc测试123"];
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
     
-    NSLog(@"解密 = %@",[info RSADecryptWithBase64String:str]);
+    [dic setValue:@"379020" forKey:@"appid"];
+    
+    [dic setValue:@"ios" forKey:@"bk_key"];
+    
+    [DataManager postJSONDataWithURL:urlStr parameters:dic success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
+        //
+        
+        //NSLog(@"responseObject = %@",responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        //
+        
+    }];
+    
 }
 
 

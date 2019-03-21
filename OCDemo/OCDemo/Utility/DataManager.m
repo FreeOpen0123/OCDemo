@@ -10,8 +10,189 @@
 
 #import <AFNetworking.h>
 
+
 @implementation DataManager
 
+#pragma mark - 未序列化 get 请求
++ (void)getDataWithURL:(NSString *)URLString parameters:(id)parameters success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure {
+    
+    // 下载管理类的对象
+    AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+    
+    // 告知默认传输的数据类型(二进制)
+    sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    // 设置请求超时时间
+    sessionManager.requestSerializer.timeoutInterval = 30.0;
+    
+    sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/xml",@"application/json", @"text/xml", @"text/json",@"text/html",@"text/javascript", @"text/plain",@"image/jpeg", nil];
+    
+    [sessionManager GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        //
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //
+        NSLog(@"getDataWithURL = %@",task.response.URL);
+        
+        success(task,responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        //
+        
+        failure(task,error);
+    }];
+}
+
+#pragma mark - 未序列化 post 请求
++ (void)postDataWithURL:(NSString *)URLString parameters:(id)parameters success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure {
+    
+    // 下载管理类的对象
+    AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+    
+    // 告知默认传输的数据类型(二进制)
+    sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    // 设置请求超时时间
+    sessionManager.requestSerializer.timeoutInterval = 30.0;
+    
+    sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/xml",@"application/json", @"text/xml", @"text/json",@"text/html",@"text/javascript", @"text/plain",@"image/jpeg", nil];
+    
+    [sessionManager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        //
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //
+        
+        success(task,responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        //
+        
+        failure(task,error);
+    }];
+}
+
+#pragma mark - 序列化的 get 请求
++ (void)getJSONDataWithURL:(NSString *)URLString parameters:(id)parameters success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure {
+    
+    // 下载管理类的对象
+    AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+    
+    // 告知默认传输的数据类型(二进制)
+    //sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    // 设置请求超时时间
+    sessionManager.requestSerializer.timeoutInterval = 30.0;
+    
+    sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/xml",@"application/json", @"text/xml", @"text/json",@"text/html",@"text/javascript", @"text/plain",@"image/jpeg", nil];
+    
+    [sessionManager GET:URLString parameters:parameters progress:^(NSProgress * _Nonnull downloadProgress) {
+        //
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //
+        NSLog(@"getDataWithURL = %@",task.response.URL);
+        
+        success(task,responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        //
+        
+        failure(task,error);
+    }];
+}
+
+#pragma mark - 序列化的 post 请求
++ (void)postJSONDataWithURL:(NSString *)URLString parameters:(id)parameters success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure {
+    
+    // 下载管理类的对象
+    AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+    
+    // 告知默认传输的数据类型(二进制)
+    //sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    // 设置请求超时时间
+    sessionManager.requestSerializer.timeoutInterval = 30.0;
+    
+    sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/xml",@"application/json", @"text/xml", @"text/json",@"text/html",@"text/javascript", @"text/plain",@"image/jpeg", nil];
+    
+    [sessionManager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        //
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //
+        
+        success(task,responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        //
+        
+        failure(task,error);
+    }];
+}
+
+#pragma mark - json 格式参数
++ (void)postJSONDataWithURL:(NSString *)URLString JSONParameters:(NSData *)JSONData completionHandler:(void (^)(NSURLResponse * _Nonnull, id _Nullable, NSError * _Nullable))completionHandler {
+    
+    /*
+    NSDictionary *jsonDic = @{@"header":@"headerDic",@"body":@"params"};
+    
+    NSError *jsonError;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonDic options:NSJSONWritingPrettyPrinted error:&jsonError];
+    
+    NSString *jsonStr = [[NSString alloc]initWithData:jsonData encoding:NSUTF8StringEncoding];
+    [request setHTTPBody:[jsonStr dataUsingEncoding:NSUTF8StringEncoding]];
+     */
+    
+    AFURLSessionManager *sessionManager = [[AFURLSessionManager alloc]initWithSessionConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
+    NSMutableURLRequest *request = [[AFJSONRequestSerializer serializer]requestWithMethod:@"POST" URLString:URLString parameters:nil error:nil];
+    
+    //request.timeoutInterval = 30;
+    
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setHTTPBody:JSONData];
+    
+    [[sessionManager dataTaskWithRequest:request uploadProgress:^(NSProgress * _Nonnull uploadProgress) {
+        //
+        
+    } downloadProgress:^(NSProgress * _Nonnull downloadProgress) {
+        //
+        
+    } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
+        //
+        
+        completionHandler(response,responseObject,error);
+        
+    }] resume];
+}
+
+#pragma mark - 获取当前网络状态
++ (void)getNetworkReachabilityStatusChangeBlock:(void (^)(NSString * _Nonnull))block {
+    
+    [[AFNetworkReachabilityManager sharedManager]setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        //
+        if (status == -1) {
+            
+            block(@"Unknown");
+        }
+        else if (status == 0) {
+            
+            block(@"NotReachable");
+        }
+        else if (status == 1) {
+            
+            block(@"ReachableViaWWAN");
+        }
+        else if (status == 2) {
+            
+            block(@"ReachableViaWiFi");
+        }
+    }];
+    
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+}
 
 
 

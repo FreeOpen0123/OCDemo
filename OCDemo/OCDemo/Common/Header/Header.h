@@ -28,16 +28,19 @@
 
 #pragma mark - Category
 #import "UIColor+Hex.h"
-//#import "UIView+Layout.h"
+#import "UIView+Layout.h"
 #import "UIViewController+BackButtonHandler.h"
 
 
 #pragma mark - Utility
 #import "Helper.h"
+#import "DataManager.h"
 
 
 #pragma mark - CocoaPods 库
 #import <Masonry.h>
+#import <MJRefresh.h>
+#import <UIView+WebCache.h>
 
 
 #pragma mark - 宏定义
@@ -63,11 +66,18 @@
 
 #pragma mark - 存储的 key 值
 static NSString *const kInitDic = @"kInitDic";
+static NSString *const kIsLogin = @"kIsLogin"; // isLogin 和友盟冲突
+static NSString *const kIsVoice = @"kIsVoice"; // isVoice和xmpp冲突
+static NSString *const kUserName = @"kUserName";
+static NSString *const kUserId = @"kUserId";
+static NSString *const kPlainPwd = @"kPlainPwd";
+static NSString *const kCipherPwd = @"kCipherPwd";
+static NSString *const kToken = @"kToken";
+static NSString *const kUUID = @"kUUID";
 
-
-
-
-
+#pragma mark - 接口 API
+//static NSString *const kBaseURL = @"https://api.freeopen.cc";
+static NSString *const kBaseURL = @"https://api.freeopen.cc";
 
 
 

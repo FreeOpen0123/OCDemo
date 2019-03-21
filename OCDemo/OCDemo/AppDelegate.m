@@ -10,6 +10,8 @@
 
 #import "TabBarViewController.h"
 
+#import <AFNetworkReachabilityManager.h>
+
 @interface AppDelegate ()
 
 @end
@@ -24,10 +26,16 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
+    NSLog(@"didFinishLaunchingWithOptions");
+    //-------------------------------------------
     self.window.rootViewController = [[TabBarViewController alloc]init];
     
     
-    NSLog(@"didFinishLaunchingWithOptions");
+    NSLog(@"启动啦～");
+    
+    [self initCode];
+    
+    [self getNetworkStatusChange];
     
     return YES;
 }
@@ -70,8 +78,25 @@
 }
 
 
-//-------------------------------------------------
+//------------------Custom Method-------------------------------
+- (void)initCode {
+    
+    NSString *uuidStr = [[NSUUID UUID]UUIDString];
+    
+    NSLog(@"UUID = %@",uuidStr);
+}
 
+- (void)getNetworkStatusChange {
+    
+    [[AFNetworkReachabilityManager sharedManager]setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        //
+        
+        NSLog(@"Current network status = %ld",(long)status);
+    }];
+    
+    [[AFNetworkReachabilityManager sharedManager]startMonitoring];
+}
 
+//------------------System Method-------------------------------
 
 @end
