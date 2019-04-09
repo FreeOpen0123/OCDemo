@@ -63,6 +63,8 @@
     
     WebViewController *webVC = [[WebViewController alloc]init];
     
+    webVC.urlStr = @"https://www.baidu.com";
+    
     webVC.hidesBottomBarWhenPushed = YES;
     
     [self.navigationController pushViewController:webVC animated:YES];

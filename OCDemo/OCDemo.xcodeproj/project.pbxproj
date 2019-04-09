@@ -52,6 +52,7 @@
 		844B9444220042B40050F982 /* BaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844B9443220042B40050F982 /* BaseScrollView.m */; };
 		844B9447220042DC0050F982 /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844B9446220042DC0050F982 /* BaseTableView.m */; };
 		844B944A220042F30050F982 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 844B9449220042F30050F982 /* BaseTableViewCell.m */; };
+		84B68068225CFF3100B7847F /* KeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B68067225CFF3100B7847F /* KeychainManager.m */; };
 		84C3C92722195230009C50C3 /* SystemInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C3C92622195230009C50C3 /* SystemInfoViewController.m */; };
 		84C3C9A722198014009C50C3 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C3C9A622198014009C50C3 /* MasonryViewController.m */; };
 		84C782312201C22500C7975F /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C782302201C22500C7975F /* WebViewController.m */; };
@@ -169,6 +170,8 @@
 		844B9446220042DC0050F982 /* BaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
 		844B9448220042F30050F982 /* BaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		844B9449220042F30050F982 /* BaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		84B68066225CFF3100B7847F /* KeychainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainManager.h; sourceTree = "<group>"; };
+		84B68067225CFF3100B7847F /* KeychainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeychainManager.m; sourceTree = "<group>"; };
 		84C3C92522195230009C50C3 /* SystemInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemInfoViewController.h; sourceTree = "<group>"; };
 		84C3C92622195230009C50C3 /* SystemInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemInfoViewController.m; sourceTree = "<group>"; };
 		84C3C9A522198014009C50C3 /* MasonryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasonryViewController.h; sourceTree = "<group>"; };
@@ -536,6 +539,8 @@
 				841BEA2B221AA7DC00AFA255 /* FMDBManager.m */,
 				841BEA38221ACD8600AFA255 /* InfoSecurity.h */,
 				841BEA39221ACD8600AFA255 /* InfoSecurity.m */,
+				84B68066225CFF3100B7847F /* KeychainManager.h */,
+				84B68067225CFF3100B7847F /* KeychainManager.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -838,6 +843,7 @@
 			files = (
 				844B9441220042770050F982 /* BaseTextView.m in Sources */,
 				8438204A21F43F0800A30FA3 /* OneHomeViewController.m in Sources */,
+				84B68068225CFF3100B7847F /* KeychainManager.m in Sources */,
 				84C7824B220721CE00C7975F /* TwoListViewController.m in Sources */,
 				840C2DC2221882B400B89088 /* ThreeListViewController.m in Sources */,
 				844ABC3021F216F200CCC6C2 /* main.m in Sources */,

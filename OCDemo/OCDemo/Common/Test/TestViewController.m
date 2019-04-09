@@ -46,24 +46,7 @@
 #pragma mark - 点击事件
 - (void)buttonClick:(UIButton *)button {
     
-    NSString *urlStr = @"http://baike.baidu.com/api/openapi/BaikeLemmaCardApi";
-    
-    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    
-    [dic setValue:@"379020" forKey:@"appid"];
-    
-    [dic setValue:@"ios" forKey:@"bk_key"];
-    
-    [DataManager getJSONDataWithURL:urlStr parameters:dic success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
-        //
-        
-        //NSLog(@"responseObject = %@",responseObject);
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        //
-        
-    }];
-    
+    [self showAlertWithMessage:@"哈哈哈😂"];
 }
 
 

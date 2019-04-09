@@ -94,6 +94,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)RSADecryptWithBase64String:(NSString *)string;
 
+
+// RSA 签名
+
 @end
 
 NS_ASSUME_NONNULL_END

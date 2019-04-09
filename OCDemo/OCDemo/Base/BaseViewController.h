@@ -12,9 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BaseViewController : UIViewController
 {
+    UIView *toastMaskBgView;
     
+    UILabel *toastLabel;
 }
 - (void)showToastWithMessage:(NSString *)message;
+
+- (void)showAlertWithMessage:(NSString *)message;
 
 @end
 
