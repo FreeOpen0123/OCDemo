@@ -33,6 +33,11 @@
     //隐藏导航栏
     //[self.navigationController.navigationBar setHidden:YES];
     
+    // 导航栏透明
+    //[self.navigationController.navigationBar setBackgroundImage:[[UIImage alloc]init] forBarMetrics:UIBarMetricsDefault];
+    //[self.navigationController.navigationBar setShadowImage:[UIImage new]];
+    //self.navigationController.navigationBar.translucent = YES;
+    
     // 返回按钮文字
     UIBarButtonItem *backItem = [[UIBarButtonItem alloc]init];
     backItem.title = NSLocalizedString(@"back", @"返回按钮文字");
@@ -50,11 +55,53 @@
 
 }
 
-//设置状态栏颜色
+// 设置状态栏颜色
 - (UIStatusBarStyle)preferredStatusBarStyle {
     
     //return UIStatusBarStyleDefault;
     return UIStatusBarStyleLightContent;
+}
+
+// 自定义方法
+- (void)showToastWithMessage:(NSString *)message {
+    
+    UIView *maskBgView = [[UIView alloc]init];
+    maskBgView.backgroundColor = [UIColor colorWithHex:@"#323232"];
+    maskBgView.layer.cornerRadius = 24;
+    [self.view addSubview:maskBgView];
+    
+    [maskBgView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.centerX.equalTo(self.view.mas_centerX);
+        make.height.mas_equalTo(48);
+        
+        if (@available(iOS 11.0, *)) {
+            make.bottom.equalTo(self.view.mas_safeAreaLayoutGuideBottom).offset(-(self.tabBarController.tabBar.height+20));
+        } else {
+            // Fallback on earlier versions
+            make.bottom.equalTo(self.view.mas_bottom).offset(-(self.tabBarController.tabBar.height+20));
+        }
+    }];
+    
+    UILabel *label = [[UILabel alloc]init];
+    //label.backgroundColor = [UIColor greenColor];
+    label.textColor = [UIColor whiteColor];
+    label.font = [UIFont systemFontOfSize:14.0];
+    label.text = message;
+    [label sizeToFit];
+    [maskBgView addSubview:label];
+    
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.centerY.equalTo(maskBgView.mas_centerY);
+        make.left.equalTo(maskBgView.mas_left).offset(24);
+        make.right.equalTo(maskBgView.mas_right).offset(-24);
+    }];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [maskBgView removeFromSuperview];
+    });
 }
 
 

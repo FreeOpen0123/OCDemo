@@ -21,8 +21,6 @@
     self.title = @"测试";
     
     [self createUI];
-    
-    [self test];
 }
 
 #pragma mark - 创建界面
@@ -45,12 +43,6 @@
     }];
 }
 
-#pragma mark - 测试方法
-- (void)test {
-    
-    
-}
-
 #pragma mark - 点击事件
 - (void)buttonClick:(UIButton *)button {
     
@@ -62,7 +54,7 @@
     
     [dic setValue:@"ios" forKey:@"bk_key"];
     
-    [DataManager postJSONDataWithURL:urlStr parameters:dic success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
+    [DataManager getJSONDataWithURL:urlStr parameters:dic success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
         //
         
         //NSLog(@"responseObject = %@",responseObject);

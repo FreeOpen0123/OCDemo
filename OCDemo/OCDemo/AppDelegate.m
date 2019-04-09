@@ -81,9 +81,15 @@
 //------------------Custom Method-------------------------------
 - (void)initCode {
     
+    NSLog(@"Sandbox = %@",[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]);
+    
     NSString *uuidStr = [[NSUUID UUID]UUIDString];
     
-    NSLog(@"UUID = %@",uuidStr);
+    [Helper writePlistObject:uuidStr forKey:kUUID];
+    
+    NSDictionary *dic = @{@"key1":@"value1",@"key2":@"value2",@"key3":@"value3",@"key4":@"value4"};
+    
+    [Helper writePlistObject:dic forKey:kInitDic];
 }
 
 - (void)getNetworkStatusChange {
@@ -92,6 +98,8 @@
         //
         
         NSLog(@"Current network status = %ld",(long)status);
+        
+        [Helper writePlistObject:@(status) forKey:kNetworkStatus];
     }];
     
     [[AFNetworkReachabilityManager sharedManager]startMonitoring];

@@ -74,9 +74,15 @@ static NSString *const kPlainPwd = @"kPlainPwd";
 static NSString *const kCipherPwd = @"kCipherPwd";
 static NSString *const kToken = @"kToken";
 static NSString *const kUUID = @"kUUID";
+static NSString *const kNetworkStatus = @"kNetworkStatus";
+
+
+#pragma mark - 常量
+static NSString *const kAppleID = @"1234567890";
+static NSString *const kKeychainAccessGroup = @"";
 
 #pragma mark - 接口 API
-//static NSString *const kBaseURL = @"https://api.freeopen.cc";
+//static NSString *const kBaseURL = @"https://test.freeopen.cc";
 static NSString *const kBaseURL = @"https://api.freeopen.cc";
 
 
@@ -85,3 +91,5 @@ static NSString *const kBaseURL = @"https://api.freeopen.cc";
 
 
 #endif /* Header_h */
+
+

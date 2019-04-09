@@ -38,6 +38,7 @@
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         //
+        NSLog(@"getDataWithURLerror = %@",error.localizedDescription);
         
         failure(task,error);
     }];
@@ -62,11 +63,13 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //
+        NSLog(@"postDataWithURL = %@",task.response.URL);
         
         success(task,responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         //
+        NSLog(@"postDataWithURLerror = %@",error.localizedDescription);
         
         failure(task,error);
     }];
@@ -74,6 +77,9 @@
 
 #pragma mark - 序列化的 get 请求
 + (void)getJSONDataWithURL:(NSString *)URLString parameters:(id)parameters success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure {
+    
+    // 添加公用参数
+    //[self addCommonParameters:parameters];
     
     // 下载管理类的对象
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
@@ -91,12 +97,13 @@
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //
-        NSLog(@"getDataWithURL = %@",task.response.URL);
+        NSLog(@"getJSONDataWithURL = %@",task.response.URL);
         
         success(task,responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         //
+        NSLog(@"getJSONDataWithURLerror = %@",error.localizedDescription);
         
         failure(task,error);
     }];
@@ -104,6 +111,9 @@
 
 #pragma mark - 序列化的 post 请求
 + (void)postJSONDataWithURL:(NSString *)URLString parameters:(id)parameters success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure {
+    
+    // 添加公用参数
+    //[self addCommonParameters:parameters];
     
     // 下载管理类的对象
     AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
@@ -116,16 +126,22 @@
     
     sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/xml",@"application/json", @"text/xml", @"text/json",@"text/html",@"text/javascript", @"text/plain",@"image/jpeg", nil];
     
+    // 添加 header 参数
+    //[sessionManager.requestSerializer setValue:@"123" forHTTPHeaderField:@"token"];
+    
+    
     [sessionManager POST:URLString parameters:parameters progress:^(NSProgress * _Nonnull uploadProgress) {
         //
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //
+        NSLog(@"postJSONDataWithURL = %@",task.response.URL);
         
         success(task,responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         //
+        NSLog(@"postJSONDataWithURLerror = %@",error.localizedDescription);
         
         failure(task,error);
     }];
@@ -194,7 +210,29 @@
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
 }
 
-
+#pragma mark - 添加公用参数
++ (void)addCommonParameters:(NSMutableDictionary *)dic {
+    
+    NSString *version = [[[NSBundle mainBundle]infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    NSString *bundleIdentifier = [[NSBundle mainBundle]bundleIdentifier];
+    
+    
+    [dic setValue:bundleIdentifier forKey:@"bundleIdentifier"];
+    
+    [dic setValue:version forKey:@"version"];
+    
+    [dic setValue:@"iOS" forKey:@"platform"];
+    
+    [dic setValue:@"***" forKey:@"UUID"];
+    
+    [dic setValue:@"AppStore" forKey:@"channel"];
+    
+    [dic setValue:@(1) forKey:@"sockpuppet"];
+    
+    [dic setValue:@"zh-HK" forKey:@"language"];
+    
+    [dic setValue:@(2) forKey:@"NetworkStatus"];
+}
 
 
 @end
