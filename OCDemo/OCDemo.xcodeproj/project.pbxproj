@@ -52,6 +52,11 @@
 		844B9444220042B40050F982 /* BaseScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844B9443220042B40050F982 /* BaseScrollView.m */; };
 		844B9447220042DC0050F982 /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 844B9446220042DC0050F982 /* BaseTableView.m */; };
 		844B944A220042F30050F982 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 844B9449220042F30050F982 /* BaseTableViewCell.m */; };
+		8451B97E2260D6C1003BDB9C /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451B97D2260D6C1003BDB9C /* LoginViewController.m */; };
+		8451B9812260D6DF003BDB9C /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451B9802260D6DF003BDB9C /* RegisterViewController.m */; };
+		8451B9842260D70E003BDB9C /* ForgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451B9832260D70E003BDB9C /* ForgetPwdViewController.m */; };
+		8451B9882260D8CE003BDB9C /* AdvertisingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451B9872260D8CE003BDB9C /* AdvertisingViewController.m */; };
+		8451B98C2260DC54003BDB9C /* LockScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8451B98B2260DC54003BDB9C /* LockScreenViewController.m */; };
 		84B68068225CFF3100B7847F /* KeychainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B68067225CFF3100B7847F /* KeychainManager.m */; };
 		84C3C92722195230009C50C3 /* SystemInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C3C92622195230009C50C3 /* SystemInfoViewController.m */; };
 		84C3C9A722198014009C50C3 /* MasonryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C3C9A622198014009C50C3 /* MasonryViewController.m */; };
@@ -170,6 +175,16 @@
 		844B9446220042DC0050F982 /* BaseTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
 		844B9448220042F30050F982 /* BaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		844B9449220042F30050F982 /* BaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		8451B97C2260D6C1003BDB9C /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		8451B97D2260D6C1003BDB9C /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		8451B97F2260D6DF003BDB9C /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		8451B9802260D6DF003BDB9C /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		8451B9822260D70E003BDB9C /* ForgetPwdViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ForgetPwdViewController.h; sourceTree = "<group>"; };
+		8451B9832260D70E003BDB9C /* ForgetPwdViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ForgetPwdViewController.m; sourceTree = "<group>"; };
+		8451B9862260D8CE003BDB9C /* AdvertisingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdvertisingViewController.h; sourceTree = "<group>"; };
+		8451B9872260D8CE003BDB9C /* AdvertisingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdvertisingViewController.m; sourceTree = "<group>"; };
+		8451B98A2260DC54003BDB9C /* LockScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LockScreenViewController.h; sourceTree = "<group>"; };
+		8451B98B2260DC54003BDB9C /* LockScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LockScreenViewController.m; sourceTree = "<group>"; };
 		84B68066225CFF3100B7847F /* KeychainManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainManager.h; sourceTree = "<group>"; };
 		84B68067225CFF3100B7847F /* KeychainManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeychainManager.m; sourceTree = "<group>"; };
 		84C3C92522195230009C50C3 /* SystemInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemInfoViewController.h; sourceTree = "<group>"; };
@@ -347,6 +362,9 @@
 				844ABCCA21F3715C00CCC6C2 /* Two */,
 				844ABCC921F3715700CCC6C2 /* Three */,
 				844ABCC821F3715200CCC6C2 /* Four */,
+				8451B9782260D685003BDB9C /* Login */,
+				8451B9892260DBF8003BDB9C /* LockScreen */,
+				8451B9852260D87D003BDB9C /* Advertisement */,
 				844ABCC321F370B800CCC6C2 /* TabBarController */,
 				844ABC2021F216F200CCC6C2 /* AppDelegate.h */,
 				844ABC2121F216F200CCC6C2 /* AppDelegate.m */,
@@ -602,6 +620,61 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8451B9782260D685003BDB9C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8451B97B2260D685003BDB9C /* Login */,
+				8451B97A2260D685003BDB9C /* Register */,
+				8451B9792260D685003BDB9C /* ForgotPassword */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8451B9792260D685003BDB9C /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				8451B9822260D70E003BDB9C /* ForgetPwdViewController.h */,
+				8451B9832260D70E003BDB9C /* ForgetPwdViewController.m */,
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		8451B97A2260D685003BDB9C /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				8451B97F2260D6DF003BDB9C /* RegisterViewController.h */,
+				8451B9802260D6DF003BDB9C /* RegisterViewController.m */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		8451B97B2260D685003BDB9C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8451B97C2260D6C1003BDB9C /* LoginViewController.h */,
+				8451B97D2260D6C1003BDB9C /* LoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		8451B9852260D87D003BDB9C /* Advertisement */ = {
+			isa = PBXGroup;
+			children = (
+				8451B9862260D8CE003BDB9C /* AdvertisingViewController.h */,
+				8451B9872260D8CE003BDB9C /* AdvertisingViewController.m */,
+			);
+			path = Advertisement;
+			sourceTree = "<group>";
+		};
+		8451B9892260DBF8003BDB9C /* LockScreen */ = {
+			isa = PBXGroup;
+			children = (
+				8451B98A2260DC54003BDB9C /* LockScreenViewController.h */,
+				8451B98B2260DC54003BDB9C /* LockScreenViewController.m */,
+			);
+			path = LockScreen;
+			sourceTree = "<group>";
+		};
 		84C3C9242219521C009C50C3 /* SystemInfo */ = {
 			isa = PBXGroup;
 			children = (
@@ -851,18 +924,22 @@
 				844B943E2200425F0050F982 /* BaseTextField.m in Sources */,
 				8438204221F43E4000A30FA3 /* TabBarViewController.m in Sources */,
 				8438205321F43F6100A30FA3 /* FourHomeViewController.m in Sources */,
+				8451B9882260D8CE003BDB9C /* AdvertisingViewController.m in Sources */,
 				840C2DC9221886F100B89088 /* LifecycleViewController.m in Sources */,
 				84C3C92722195230009C50C3 /* SystemInfoViewController.m in Sources */,
 				8438203921F43C0700A30FA3 /* BaseViewController.m in Sources */,
 				841BEA32221AAFDB00AFA255 /* SystemStateViewController.m in Sources */,
 				84C3C9A722198014009C50C3 /* MasonryViewController.m in Sources */,
 				8438204D21F43F2500A30FA3 /* TwoHomeViewController.m in Sources */,
+				8451B98C2260DC54003BDB9C /* LockScreenViewController.m in Sources */,
 				8408A386220045070048EC6C /* UIView+Layout.m in Sources */,
 				844B9447220042DC0050F982 /* BaseTableView.m in Sources */,
 				844B943122003FD90050F982 /* BaseNavigationController.m in Sources */,
 				8438203521F43ADE00A30FA3 /* UIColor+Hex.m in Sources */,
 				844B9434220040870050F982 /* BaseTabBarController.m in Sources */,
+				8451B9842260D70E003BDB9C /* ForgetPwdViewController.m in Sources */,
 				844B944A220042F30050F982 /* BaseTableViewCell.m in Sources */,
+				8451B9812260D6DF003BDB9C /* RegisterViewController.m in Sources */,
 				8438205021F43F4300A30FA3 /* ThreeHomeViewController.m in Sources */,
 				844ABC2221F216F200CCC6C2 /* AppDelegate.m in Sources */,
 				8438206821F45BBD00A30FA3 /* DataManager.m in Sources */,
@@ -875,6 +952,7 @@
 				84C782312201C22500C7975F /* WebViewController.m in Sources */,
 				8408A389220045390048EC6C /* UIViewController+BackButtonHandler.m in Sources */,
 				844B943B220042300050F982 /* BaseButton.m in Sources */,
+				8451B97E2260D6C1003BDB9C /* LoginViewController.m in Sources */,
 				840C2DC5221882D600B89088 /* FourListViewController.m in Sources */,
 				841BEA2C221AA7DC00AFA255 /* FMDBManager.m in Sources */,
 				844B942E22003F750050F982 /* BaseView.m in Sources */,
