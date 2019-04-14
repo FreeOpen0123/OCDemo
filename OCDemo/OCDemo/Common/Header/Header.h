@@ -49,17 +49,19 @@
 #define ColorWithRGBA(Red, Green, Blue, Alpha) [UIColor colorWithRed:(Red)/255.0 green:(Green)/255.0 blue:(Blue)/255.0 alpha:(Alpha)]
 
 #pragma mark - 常用尺寸
+//屏幕分辨率
+#define SCREEN_SCALE [UIScreen mainScreen].scale
 //屏幕宽
 #define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
 //屏幕高
 #define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
-//状态栏高度 20 or 44
+//状态栏高度 20(iPhone & iPad 普通屏) or 44(iPhone刘海屏) or 24(iPad全面屏)
 #define STATUS_BAR_HEIGHT [[UIApplication sharedApplication]statusBarFrame].size.height
-//导航栏高度 44
+//导航栏高度 44(iPhone) or 50(iPad)
 #define NAVIGATION_BAR_HEIGHT [[UINavigationController alloc]init].navigationBar.bounds.size.height
-//标签栏高度 49
+//标签栏高度 49(iPhone) or 50(iPad)
 #define TAB_BAR_HEIGHT [[UITabBarController alloc]init].tabBar.bounds.size.height
-//工具栏高度 44
+//工具栏高度 44(iPhone) or 50(iPad)
 #define TOOL_BAR_HEIGHT [[UINavigationController alloc]init].toolbar.bounds.size.height
 //状态栏和导航栏整体高度
 #define STATUS_NAV_HEIGHT (STATUS_BAR_HEIGHT + NAVIGATION_BAR_HEIGHT)

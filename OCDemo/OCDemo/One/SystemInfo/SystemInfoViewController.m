@@ -63,6 +63,7 @@
     
     NSLog(@"---------------------------------------------------");
     
+    NSLog(@"SCREEN_SCALE = %.2f",SCREEN_SCALE);
     NSLog(@"SCREEN_WIDTH = %.2f",SCREEN_WIDTH);
     NSLog(@"SCREEN_HEIGHT = %.2f",SCREEN_HEIGHT);
     NSLog(@"STATUS_BAR_HEIGHT = %.2f",STATUS_BAR_HEIGHT);
