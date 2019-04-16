@@ -8,6 +8,8 @@
 
 #import "TestViewController.h"
 
+#import "DeviceModelName.h"
+
 @interface TestViewController ()
 
 @end
@@ -46,7 +48,9 @@
 #pragma mark - 点击事件
 - (void)buttonClick:(UIButton *)button {
     
-    [self showAlertWithMessage:@"哈哈哈😂"];
+    NSLog(@"--%@==",[DeviceModelName getDeviceModel]);
+    
+    NSLog(@"--%@==",[DeviceModelName getModelName]);
 }
 
 

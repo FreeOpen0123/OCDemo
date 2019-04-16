@@ -18,6 +18,7 @@
 		841BEA2C221AA7DC00AFA255 /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 841BEA2B221AA7DC00AFA255 /* FMDBManager.m */; };
 		841BEA32221AAFDB00AFA255 /* SystemStateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841BEA31221AAFDB00AFA255 /* SystemStateViewController.m */; };
 		841BEA3A221ACD8600AFA255 /* InfoSecurity.m in Sources */ = {isa = PBXBuildFile; fileRef = 841BEA39221ACD8600AFA255 /* InfoSecurity.m */; };
+		8423EAFF2264D9ED00859FEB /* DeviceModelName.m in Sources */ = {isa = PBXBuildFile; fileRef = 8423EAFE2264D9ED00859FEB /* DeviceModelName.m */; };
 		8438203521F43ADE00A30FA3 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203421F43ADE00A30FA3 /* UIColor+Hex.m */; };
 		8438203921F43C0700A30FA3 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203821F43C0700A30FA3 /* BaseViewController.m */; };
 		8438203D21F43C5A00A30FA3 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438203C21F43C5A00A30FA3 /* TestViewController.m */; };
@@ -105,6 +106,8 @@
 		841BEA31221AAFDB00AFA255 /* SystemStateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemStateViewController.m; sourceTree = "<group>"; };
 		841BEA38221ACD8600AFA255 /* InfoSecurity.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoSecurity.h; sourceTree = "<group>"; };
 		841BEA39221ACD8600AFA255 /* InfoSecurity.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoSecurity.m; sourceTree = "<group>"; };
+		8423EAFD2264D9ED00859FEB /* DeviceModelName.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceModelName.h; sourceTree = "<group>"; };
+		8423EAFE2264D9ED00859FEB /* DeviceModelName.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceModelName.m; sourceTree = "<group>"; };
 		8438203221F43A7F00A30FA3 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		8438203321F43ADE00A30FA3 /* UIColor+Hex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
 		8438203421F43ADE00A30FA3 /* UIColor+Hex.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
@@ -559,6 +562,8 @@
 				841BEA39221ACD8600AFA255 /* InfoSecurity.m */,
 				84B68066225CFF3100B7847F /* KeychainManager.h */,
 				84B68067225CFF3100B7847F /* KeychainManager.m */,
+				8423EAFD2264D9ED00859FEB /* DeviceModelName.h */,
+				8423EAFE2264D9ED00859FEB /* DeviceModelName.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -915,6 +920,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				844B9441220042770050F982 /* BaseTextView.m in Sources */,
+				8423EAFF2264D9ED00859FEB /* DeviceModelName.m in Sources */,
 				8438204A21F43F0800A30FA3 /* OneHomeViewController.m in Sources */,
 				84B68068225CFF3100B7847F /* KeychainManager.m in Sources */,
 				84C7824B220721CE00C7975F /* TwoListViewController.m in Sources */,
