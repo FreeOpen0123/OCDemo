@@ -12,6 +12,8 @@
 
 #import <AFNetworkReachabilityManager.h>
 
+#import "AdvertisingViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -30,6 +32,9 @@
     //-------------------------------------------
     self.window.rootViewController = [[TabBarViewController alloc]init];
     
+    AdvertisingViewController *vc = [[AdvertisingViewController alloc]init];
+    // Unbalanced calls to begin/end appearance transitions for <TabBarViewController: 0x7fc9fc019000>.
+    [self.window.rootViewController presentViewController:vc animated:YES completion:nil];
     
     NSLog(@"启动啦～");
     
@@ -107,4 +112,8 @@
 
 //------------------System Method-------------------------------
 
+
+
 @end
+
+
