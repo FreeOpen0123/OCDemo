@@ -30,6 +30,9 @@ NS_ASSUME_NONNULL_BEGIN
 // 当前网络状态
 + (void)getNetworkReachabilityStatusChangeBlock:(void(^)(NSString * _Nonnull status))block;
 
+// 上传图片
++ (void)postImageDataWithURL:(NSString *)URLString imageData:(NSData *)imageData parameters:(id _Nullable)parameters progress:(void(^)(NSProgress * _Nonnull uploadProgress))progress success:(void (^) (NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject))success failure:(void (^) (NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failure;
+
 // 上传文件
 
 // 下载文件
