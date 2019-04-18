@@ -10,6 +10,8 @@
 
 @interface AdvertisingViewController ()
 
+@property(nonatomic,strong)NSTimer *timer;
+
 @end
 
 @implementation AdvertisingViewController
@@ -17,6 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    waitTime = 3;
     
     [self createUI];
 }
@@ -175,9 +179,9 @@
         make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
     }];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.backgroundColor = [UIColor lightGrayColor];
-    [button setTitle:@"跳过" forState:UIControlStateNormal];
+    [button setTitle:[NSString stringWithFormat:@"跳过 %li",(long)waitTime] forState:UIControlStateNormal];
     [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     button.titleLabel.font = [UIFont systemFontOfSize:13];
     button.layer.cornerRadius = 13;
@@ -200,10 +204,14 @@
             make.right.equalTo(self.view.mas_right).offset(-20);
         }
         
-        make.size.mas_equalTo(CGSizeMake(55, 26));
+        make.size.mas_equalTo(CGSizeMake(60, 26));
     }];
     
-    [self performSelector:@selector(delayMethod) withObject:nil afterDelay:3.0];
+    //[self performSelector:@selector(delayMethod) withObject:nil afterDelay:3.0];
+    
+    waitTime -= 1;
+    
+    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(timerMethod) userInfo:nil repeats:YES];
 }
 
 #pragma mark - 点击按钮
@@ -220,13 +228,31 @@
 }
 
 #pragma mark - 延迟执行
-- (void)delayMethod {
+//- (void)delayMethod {
+//
+//    [self dismissAction];
+//}
+
+- (void)timerMethod {
     
-    [self dismissAction];
+    if (waitTime >= 0) {
+        
+        NSString *title = [NSString stringWithFormat:@"跳过 %li",(long)waitTime];
+        
+        [button setTitle:title forState:UIControlStateNormal];
+        
+    }else {
+        
+        [self dismissAction];
+    }
+    
+    waitTime --;
 }
 
 #pragma mark - 退出当前页面
 - (void)dismissAction {
+    
+    [_timer invalidate];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

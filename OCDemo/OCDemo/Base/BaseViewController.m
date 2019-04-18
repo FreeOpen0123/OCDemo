@@ -8,7 +8,11 @@
 
 #import "BaseViewController.h"
 
+#import <MBProgressHUD.h>
+
 @interface BaseViewController ()
+
+@property(nonatomic,strong)MBProgressHUD *hud;
 
 @end
 
@@ -62,7 +66,7 @@
     return UIStatusBarStyleLightContent;
 }
 
-// 自定义方法
+#pragma mark - Toast 提示
 - (void)showToastWithMessage:(NSString *)message {
     
     // 放在 window 上可以跨页面显示
@@ -116,6 +120,7 @@
     });
 }
 
+#pragma mark - Alert 提示
 - (void)showAlertWithMessage:(NSString *)message {
     
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"提示" message:message preferredStyle:UIAlertControllerStyleAlert];
@@ -139,6 +144,21 @@
     }];
 }
 
+#pragma mark - HUD 提示
+- (void)showHUDWithTitle:(NSString *)title {
+    
+    _hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    _hud.mode = MBProgressHUDModeIndeterminate;
+    
+    _hud.label.text = title;
+}
+
+- (void)hideHUD {
+    
+    [_hud hideAnimated:YES];
+}
+
 
 /*
 #pragma mark - Navigation
@@ -150,4 +170,7 @@
 }
 */
 
+
 @end
+
+

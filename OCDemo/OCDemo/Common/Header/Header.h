@@ -78,6 +78,8 @@ static NSString *const kToken = @"kToken";
 static NSString *const kUUID = @"kUUID";
 static NSString *const kNetworkStatus = @"kNetworkStatus";
 
+#pragma mark - 测试开关
+static BOOL const kSwitch = YES;
 
 #pragma mark - 常量
 static NSString *const kAppleID = @"1234567890";

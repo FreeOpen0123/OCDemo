@@ -11,7 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface AdvertisingViewController : BaseViewController
-
+{
+    NSInteger waitTime;
+    
+    UIButton *button;
+}
 @end
 
 NS_ASSUME_NONNULL_END

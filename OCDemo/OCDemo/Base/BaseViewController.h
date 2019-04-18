@@ -16,9 +16,15 @@ NS_ASSUME_NONNULL_BEGIN
     
     UILabel *toastLabel;
 }
-- (void)showToastWithMessage:(NSString *)message;
 
+// Toast 提示
+- (void)showToastWithMessage:(NSString *)message;
+// Alert 提示
 - (void)showAlertWithMessage:(NSString *)message;
+// HUD 提示
+- (void)showHUDWithTitle:(NSString *)title;
+- (void)hideHUD;
+
 
 @end
 
