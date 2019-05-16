@@ -88,15 +88,34 @@ NS_ASSUME_NONNULL_BEGIN
  @param string 要加密的字符串
  @return 加密结果，Base64格式
  */
-- (NSString *)RSAEncryptWithString:(NSString *)string;
-- (NSString *)RSAEncryptWithData:(NSData *)data;
+- (NSString *)RSAPublicKeyEncryptWithString:(NSString *)string;
+- (NSString *)RSAPublicKeyEncryptWithData:(NSData *)data;
+
+- (NSString *)RSAPrivateKeyDecryptWithBase64String:(NSString *)string;
 
 
-- (NSString *)RSADecryptWithBase64String:(NSString *)string;
+/**
+ RSA 签名
+
+ @param string 要签名的字符串(文件)
+ @return 签名验证字符串
+ */
+- (NSString *)RSAPrivateKeySignForString:(NSString *)string;
+- (NSString *)RSAPrivateKeySignForData:(NSData *)data;
 
 
-// RSA 签名
+/**
+ RSA 签名验证
+
+ @param signature 签名
+ @param string 要验证的字符串(文件)
+ @return 验证结果
+ */
+- (NSString *)RSAPublicKeyVerifyWithBase64SignatureString:(NSString *)signature forString:(NSString *)string;
+- (NSString *)RSAPublicKeyVerifyWithBase64SignatureString:(NSString *)signature forData:(NSData *)data;
+
 
 @end
+
 
 NS_ASSUME_NONNULL_END

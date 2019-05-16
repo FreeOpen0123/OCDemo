@@ -31,7 +31,10 @@ NS_ASSUME_NONNULL_BEGIN
 + (void)getNetworkReachabilityStatusChangeBlock:(void(^)(NSString * _Nonnull status))block;
 
 // 上传图片
-+ (void)postImageDataWithURL:(NSString *)URLString imageData:(NSData *)imageData parameters:(id _Nullable)parameters progress:(void(^)(NSProgress * _Nonnull uploadProgress))progress success:(void (^) (NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject))success failure:(void (^) (NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failure;
++ (void)postImageDataWithURL:(NSString *)URLString imageData:(NSData * _Nonnull)imageData parameters:(id _Nullable)parameters progress:(void(^)(NSProgress * _Nonnull uploadProgress))progress success:(void (^) (NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject))success failure:(void (^) (NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failure;
+
+// 上传多张图片
++ (void)postMultiImageDataWithURL:(NSString *)URLString imageDataArray:(NSArray * _Nonnull)imageDataArray parameters:(id _Nullable)parameters progress:(void(^)(NSProgress * _Nonnull uploadProgress))progress success:(void (^) (NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject))success failure:(void (^) (NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error))failure;
 
 // 上传文件
 

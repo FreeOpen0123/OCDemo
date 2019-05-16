@@ -221,15 +221,15 @@
     return privateKeyRef;
 }
 
-#pragma mark - RSA 加密
-- (NSString *)RSAEncryptWithString:(NSString *)string {
+#pragma mark - RSA 公钥加密
+- (NSString *)RSAPublicKeyEncryptWithString:(NSString *)string {
     
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
     
-    return [self RSAEncryptWithData:data];
+    return [self RSAPublicKeyEncryptWithData:data];
 }
 
-- (NSString *)RSAEncryptWithData:(NSData *)data {
+- (NSString *)RSAPublicKeyEncryptWithData:(NSData *)data {
     
     uint8_t encryptData[RSAKeySize / 8] = {0};
     size_t blockSize = RSAKeySize / 8;
@@ -247,8 +247,10 @@
     return result;
 }
 
-#pragma mark - RSA 解密
-- (NSString *)RSADecryptWithBase64String:(NSString *)string {
+
+
+#pragma mark - RSA 私钥解密
+- (NSString *)RSAPrivateKeyDecryptWithBase64String:(NSString *)string {
     
     //密文
     //uint8_t encryptData[RSAKeySize / 8] = {0};
@@ -266,11 +268,84 @@
     
     NSAssert(ret == errSecSuccess, @"解密失败 %d",ret);
     
-    NSString *result = [NSString stringWithUTF8String:decryptData];
+    //NSLog(@"decryptData = %s",decryptData);
+    //NSString *result = [NSString stringWithUTF8String:decryptData];
+    NSString *result = [NSString stringWithCString:(char *)decryptData encoding:NSUTF8StringEncoding];
     
     return result;
+}
+
+#pragma mark - RSA 签名
+- (NSString *)RSAPrivateKeySignForString:(NSString *)string {
+    
+    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+    
+    return [self RSAPrivateKeySignForData:data];
+}
+
+- (NSString *)RSAPrivateKeySignForData:(NSData *)data {
+    
+    //应该对文件 Hash 签名，不是直接对文件签名，但是这里没有这样写
+    
+    size_t sigLen = SecKeyGetBlockSize(privateKeyRef);
+    
+    uint8_t *sig = malloc(sigLen);
+    
+    bzero(sig, sigLen);
+    
+    OSStatus ret;
+    
+    //SecKeyRawSign(<#SecKeyRef  _Nonnull key#>, <#SecPadding padding#>, <#const uint8_t * _Nonnull dataToSign#>, <#size_t dataToSignLen#>, <#uint8_t * _Nonnull sig#>, <#size_t * _Nonnull sigLen#>)
+    
+    ret = SecKeyRawSign(privateKeyRef, kSecPaddingPKCS1SHA256, data.bytes, data.length, sig, &sigLen);
+    
+    //NSAssert(ret == errSecSuccess, @"签名失败 %d",ret);
+    
+    if (ret == errSecSuccess) {
+        
+        NSData *signatureData = [NSData dataWithBytes:sig length:sigLen];
+        
+        NSString *signatureStr = [signatureData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
+        
+        return signatureStr;
+        
+    }else {
+        
+        return [NSString stringWithFormat:@"签名失败 ret = %d",ret];
+    }
+}
+
+- (NSString *)RSAPublicKeyVerifyWithBase64SignatureString:(NSString *)signature forString:(NSString *)string {
+    
+    NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
+    
+    return [self RSAPublicKeyVerifyWithBase64SignatureString:signature forData:data];
+}
+
+- (NSString *)RSAPublicKeyVerifyWithBase64SignatureString:(NSString *)signature forData:(NSData *)data {
+    
+    NSData *signatureData = [[NSData alloc]initWithBase64EncodedString:signature options:NSDataBase64DecodingIgnoreUnknownCharacters];
+    
+    OSStatus ret;
+    
+    //SecKeyRawVerify(<#SecKeyRef  _Nonnull key#>, <#SecPadding padding#>, <#const uint8_t * _Nonnull signedData#>, <#size_t signedDataLen#>, <#const uint8_t * _Nonnull sig#>, <#size_t sigLen#>)
+    
+    ret = SecKeyRawVerify(publicKeyRef, kSecPaddingPKCS1SHA256, data.bytes, data.length, signatureData.bytes, signatureData.length);
+    
+    //NSAssert(ret == errSecSuccess, @"验证签名失败 %d",ret);
+    
+    if (ret == errSecSuccess) {
+        
+        return @"验证签名成功";
+        
+    }else {
+        
+        return [NSString stringWithFormat:@"验证签名失败 ret = %d",ret];
+    }
 }
 
 
 
 @end
+
+

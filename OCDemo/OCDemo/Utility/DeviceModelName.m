@@ -34,7 +34,7 @@
     
     if (modelName == nil) {
         
-        modelName = @"Unknown";
+        modelName = [NSString stringWithFormat:@"Unknown %@",deviceModel];
     }
     
     return modelName;

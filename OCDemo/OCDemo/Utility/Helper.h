@@ -55,6 +55,10 @@ NS_ASSUME_NONNULL_BEGIN
 // 获取 UUID
 + (NSString *)getUUID;
 
+// Unicode 转码
++ (NSString *)UTF8StringFromUnicodeDic:(NSDictionary *)dic;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

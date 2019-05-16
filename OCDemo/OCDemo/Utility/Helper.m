@@ -87,6 +87,7 @@
 #pragma mark - 获取 UUID
 + (NSString *)getUUID {
     
+    //return [[NSUUID UUID]UUIDString];
     return get_uuid();
 }
 
@@ -105,5 +106,27 @@ NSString * get_uuid() {
     return uuid;
 }
 
+#pragma mark - Unicode 转码
++ (NSString *)UTF8StringFromUnicodeDic:(NSDictionary *)dic {
+    
+    if (![dic count]) {
+        
+        return nil;
+    }
+    
+    NSString *tempStr1 = [[dic description] stringByReplacingOccurrencesOfString:@"\\u" withString:@"\\U"];
+    
+    NSString *tempStr2 = [tempStr1 stringByReplacingOccurrencesOfString:@"\"" withString:@"\\\""];
+    
+    NSString *tempStr3 = [[@"\"" stringByAppendingString:tempStr2] stringByAppendingString:@"\""];
+    
+    NSData *tempData = [tempStr3 dataUsingEncoding:NSUTF8StringEncoding];
+    
+    //NSString *str = [NSPropertyListSerialization propertyListFromData:tempData mutabilityOption:NSPropertyListImmutable format:NULL errorDescription:NULL];
+    
+    NSString *str = [NSPropertyListSerialization propertyListWithData:tempData options:NSPropertyListImmutable format:NULL error:NULL];
+    
+    return str;
+}
 
 @end

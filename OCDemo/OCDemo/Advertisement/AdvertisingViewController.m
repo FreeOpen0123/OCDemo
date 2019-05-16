@@ -8,6 +8,8 @@
 
 #import "AdvertisingViewController.h"
 
+#import "DeviceModelName.h"
+
 @interface AdvertisingViewController ()
 
 @property(nonatomic,strong)NSTimer *timer;
@@ -124,7 +126,7 @@
         
         imageName = @"2688x1242";
     }
-    else if (CGSizeEqualToSize(currentSize, iPad_7_9_Portrait)) {
+    else if (CGSizeEqualToSize(currentSize, iPad_7_9_Portrait) && [[DeviceModelName getModelName] containsString:@"mini"]) {
         
         imageName = @"1536x2048_7.9";
     }
@@ -144,7 +146,7 @@
         
         imageName = @"2048x2732";
     }
-    else if (CGSizeEqualToSize(currentSize, iPad_7_9_Landscape)) {
+    else if (CGSizeEqualToSize(currentSize, iPad_7_9_Landscape) && [[DeviceModelName getModelName] containsString:@"mini"]) {
         
         imageName = @"2048x1536_7.9";
     }

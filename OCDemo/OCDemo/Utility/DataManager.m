@@ -245,7 +245,45 @@
     }];
 }
 
-
+#pragma mark - 上传多张图片
++ (void)postMultiImageDataWithURL:(NSString *)URLString imageDataArray:(NSArray *)imageDataArray parameters:(id)parameters progress:(void (^)(NSProgress * _Nonnull))progress success:(void (^)(NSURLSessionDataTask * _Nonnull, id _Nullable))success failure:(void (^)(NSURLSessionDataTask * _Nullable, NSError * _Nonnull))failure {
+    
+    //下载管理类的对象
+    AFHTTPSessionManager *sessionManager = [AFHTTPSessionManager manager];
+    
+    //告知默认传输的数据类型(二进制)
+    //sessionManager.responseSerializer = [AFHTTPResponseSerializer serializer];
+    
+    sessionManager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/xml",@"application/json", @"text/xml", @"text/json",@"text/html",@"text/javascript", @"text/plain",@"image/jpeg", nil];
+    
+    [sessionManager POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
+        //
+        
+        for (NSData *imageData in imageDataArray) {
+            
+            NSString *nameStr = [[NSUUID UUID]UUIDString];
+            
+            [formData appendPartWithFileData:imageData name:nameStr fileName:@"uploadImage" mimeType:@"image/jpeg"];
+        }
+        
+    } progress:^(NSProgress * _Nonnull uploadProgress) {
+        //
+        
+        progress(uploadProgress);
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //
+        NSLog(@"postMultiImageDataWithURL = %@",task.response.URL);
+        
+        success(task,responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        //
+        NSLog(@"postMultiImageDataWithURLerror = %@",error.localizedDescription);
+        
+        failure(task,error);
+    }];
+}
 
 #pragma mark - 添加公用参数
 + (void)addCommonParameters:(NSMutableDictionary *)dic {

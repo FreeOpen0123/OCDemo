@@ -8,7 +8,7 @@
 
 #import "TestViewController.h"
 
-#import "DeviceModelName.h"
+#import "InfoSecurity.h"
 
 @interface TestViewController ()
 
@@ -48,9 +48,15 @@
 #pragma mark - 点击事件
 - (void)buttonClick:(UIButton *)button {
     
-    NSLog(@"--%@==",[DeviceModelName getDeviceModel]);
+    InfoSecurity *security = [[InfoSecurity alloc]init];
     
-    NSLog(@"--%@==",[DeviceModelName getModelName]);
+    [security generateRSAKeyPair];
+    
+    NSString *signature = [security RSAPrivateKeySignForString:@"123你好abc"];
+    
+    NSString *result = [security RSAPublicKeyVerifyWithBase64SignatureString:signature forString:@"123你好abc"];
+    
+    NSLog(@"result = %@",result);
 }
 
 
